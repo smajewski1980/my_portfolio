@@ -3,6 +3,7 @@
 const indexHeading = document.querySelector('.indexH1');
 const triangle = document.querySelector('.triangle');
 const links = document.getElementById('navUL');
+
 const burger = document.querySelector('.burgerIcon');
 
 triangle.addEventListener('click', indexAnimation);
@@ -27,6 +28,7 @@ function closeLinks(){
 }
 function bringInLinks(){
     burger.style.opacity='0';
+    links.style.display='block';
     setTimeout(()=>{
         burger.style.display='none';
     }, 1000)

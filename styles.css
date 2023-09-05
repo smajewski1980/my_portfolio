@@ -21,10 +21,12 @@
     transform-origin:bottom left;
     z-index: -1;
 }
+/* At some point want to come back to this and make
+   the header fixed on the main non index pages */
 .nonIdxHeader{
     color:hsl(300, 75%, 85%);
-    font-size: 5dvw;
-    margin: .75% 
+    font-size: 4.5dvw;
+    margin: .75%;
 }
 .nonIdxBody a{
     margin-left:.75%;
@@ -74,7 +76,7 @@ h1{
 .indexH1{
     color:hsl(300, 75%, 85%);
     font-size: 5dvw;
-    left:-19dvw;
+    left:-23dvw;
     opacity:0;
     position:absolute;
     top:-150px;
@@ -93,10 +95,14 @@ h1{
     z-index: 2;
 }
 #navUL{
+    display:none;
     position:relative;
     bottom:-2.5dvw;
     transition: bottom 1000ms, opacity 500ms;
 }
+/* #navUL a{
+    display:none;
+} */
 .container ul li{
     display: inline-block;
     list-style-type: none;
@@ -113,6 +119,7 @@ h1{
 
 /* BIO PAGE */
 
+
 .bioContent{
     display:flex;
     justify-content: space-evenly;
@@ -123,17 +130,23 @@ h1{
     position: absolute;
     top:0;
     right:0;
-    margin: 2.5vw 2.5vw 0 0;   
+    margin: 5vw 5vw 0 0;   
 }
-.bioContent p{
+.bioContentText{
     color: hsl(300, 75%, 85%);
+    display:flex;
+    flex-direction:column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:1.1rem;
+    gap:1rem;
+    justify-content: center;
+    line-height: 1.5;
+    text-indent:4ch;
     width:50%;
 }
 .bioContent img{
-    opacity:.25;
-    width:35%;
+    border-radius:5px;
+    /* width:35%; */
 }
 
 /* CONTACT PAGE */
@@ -153,4 +166,38 @@ h1{
     
     /* opacity:.25; */
     width:100%;
+}
+
+/* PROJECTS PAGE*/
+/* Decided to experiment with some different selectors */
+.projectsContainer{
+    display:flex;
+    flex-wrap:wrap;
+    row-gap: 2.5vw;
+    justify-content: space-between;
+    /* outline: 3px solid lime; */
+    position: absolute;
+    right:2.5vw;
+    top:2.5vw;
+    width:65%;
+}
+.projectCard{
+    background-color:hsla(300, 75%, 25%, 10%);
+    border-radius:10px;
+    color:hsl(300, 75%, 85%);    
+    min-width:350px;
+    padding-inline: .75rem;;
+    width:47%;
+}
+.projectCard > *:not(img){
+    margin:.75rem 0 .75rem 0;
+}
+.projectCard img{
+    width:100%
+}
+.projectCard p:nth-of-type(2n){
+    font-size:1.2rem;
+}
+.icon img{
+    width:1.2rem;
 }
