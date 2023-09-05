@@ -11,14 +11,13 @@
 /* THIS BREAKS ON SMALLER SCREENS, NEED TO FIX */
 .nonIdxTriangle{
     background-color:hsl(300, 75%, 15%);
-    bottom:30%;
     height:35dvw;
-    left:0%; 
-    opacity:.95;
-    position:absolute; 
+    opacity:.90;
+    position:fixed; 
     rotate:-45deg;
-    width:70dvw;
+    bottom:30%;
     transform-origin:bottom left;
+    width:70dvw;
     z-index: -1;
 }
 /* At some point want to come back to this and make
@@ -26,10 +25,13 @@
 .nonIdxHeader{
     color:hsl(300, 75%, 85%);
     font-size: 4.5dvw;
-    margin: .75%;
+    margin: 1vw 0 0 1.5vw;
+    position:fixed;
 }
 .nonIdxBody a{
     margin-left:.75%;
+    position:fixed;
+    top:25%;
 }
 a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,18 +97,16 @@ h1{
     z-index: 2;
 }
 #navUL{
-    display:none;
-    position:relative;
     bottom:-2.5dvw;
+    position:relative;
     transition: bottom 1000ms, opacity 500ms;
+    visibility: hidden;
 }
-/* #navUL a{
-    display:none;
-} */
 .container ul li{
     display: inline-block;
     list-style-type: none;
     margin-left:1dvw;
+    transition:opacity 500ms;
 }
 .burgerIcon{
     position:absolute;
@@ -123,7 +123,7 @@ h1{
 .bioContent{
     display:flex;
     justify-content: space-evenly;
-    width:65%;
+    width:65vw;
     /* outline: 2px solid greenyellow; */
 }
 .right{
@@ -137,7 +137,8 @@ h1{
     display:flex;
     flex-direction:column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size:1.1rem;
+    /* font-size:1.1rem; */
+    font-size:clamp(.85rem, 1.1vw, 1.1rem);
     gap:1rem;
     justify-content: center;
     line-height: 1.5;
@@ -146,7 +147,7 @@ h1{
 }
 .bioContent img{
     border-radius:5px;
-    /* width:35%; */
+    width: 35%;
 }
 
 /* CONTACT PAGE */
@@ -200,4 +201,45 @@ h1{
 }
 .icon img{
     width:1.2rem;
+}
+
+@media screen and (max-width: 1200px){
+/* COMMON STYLES ACROSS MULTIPLES PAGES */
+    .nonIdxTriangle{
+        height:7vw;
+        rotate:0deg;
+        top:0;
+        width:100%;
+        z-index: 5;
+    }
+    .nonIdxHeader{
+        z-index: 6;
+    }
+    .nonIdxHeader br{
+        display:none;
+    }
+    .nonIdxBody a{
+        right:1.5vw;
+        top:1.5vw;
+        z-index: 7;
+    }
+    .right{
+        margin-inline:auto;
+        margin-block: 0;
+        top:11vw;
+        width:100vw;
+    }
+    /* PAGE SPECIFIC STYLES */
+    .bioContent img{
+        width:25%;
+    }
+    .contactContent img{
+        margin-left:27%;
+        width:50%;
+    }
+    .projectsContainer{
+        top:8vw;
+        left:5vw;
+        width:90%;
+    }
 }

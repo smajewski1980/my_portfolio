@@ -3,7 +3,6 @@
 const indexHeading = document.querySelector('.indexH1');
 const triangle = document.querySelector('.triangle');
 const links = document.getElementById('navUL');
-
 const burger = document.querySelector('.burgerIcon');
 
 triangle.addEventListener('click', indexAnimation);
@@ -17,7 +16,7 @@ function indexAnimation() {
     triangle.addEventListener('click', closeLinks);
 }
 // couldn't get burger icon to show back up when the triangle closes.
-// thats why the page does a reload after the animation completes
+// thats why the page does a reload after the close animation completes
 function closeLinks(){
     if (links.style.bottom !== '-2.5dvw'){
     links.style.bottom='-2.5dvw';
@@ -28,10 +27,12 @@ function closeLinks(){
 }
 function bringInLinks(){
     burger.style.opacity='0';
-    links.style.display='block';
+    setTimeout(()=>{
+        links.style.visibility='visible';
+    }, 1000);
     setTimeout(()=>{
         burger.style.display='none';
-    }, 1000)
+    }, 1000);
     setTimeout(()=>{
         if(links.style.bottom !== '0'){
     links.style.bottom='0';
