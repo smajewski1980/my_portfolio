@@ -7,8 +7,14 @@
 .nonIdxBody{
     background-image: url(images/numsBackgroundImage.png);
     background-size: cover;
+    position:absolute;
 }
-/* THIS BREAKS ON SMALLER SCREENS, NEED TO FIX */
+.right{
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 5vw 5vw 0 0;   
+}
 .nonIdxTriangle{
     background-color:hsl(300, 75%, 15%);
     height:35dvw;
@@ -20,16 +26,14 @@
     width:70dvw;
     z-index: -1;
 }
-/* At some point want to come back to this and make
-   the header fixed on the main non index pages */
 .nonIdxHeader{
     color:hsl(300, 75%, 85%);
-    font-size: 4.5dvw;
+    font-size: 4dvw;
     margin: 1vw 0 0 1.5vw;
     position:fixed;
 }
 .nonIdxBody a{
-    margin-left:.75%;
+    margin-left:1.5vw;
     position:fixed;
     top:25%;
 }
@@ -121,17 +125,13 @@ h1{
 
 
 .bioContent{
+    margin:7vw 0 0 30vw;
     display:flex;
     justify-content: space-evenly;
     width:65vw;
     /* outline: 2px solid greenyellow; */
 }
-.right{
-    position: absolute;
-    top:0;
-    right:0;
-    margin: 5vw 5vw 0 0;   
-}
+
 .bioContentText{
     color: hsl(300, 75%, 85%);
     display:flex;
@@ -149,24 +149,8 @@ h1{
     border-radius:5px;
     width: 35%;
 }
-
-/* CONTACT PAGE */
-.contactContent{
-    margin: 10vw 20vw 0 0;
-    width: 40vw;
-    /* outline:3px solid red; */
-}
-.contactContent p{
-    color: hsl(300, 75%, 85%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size:2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-.contactContent img{
-    
-    /* opacity:.25; */
-    width:100%;
+.leftSide{
+    display:none;
 }
 
 /* PROJECTS PAGE*/
@@ -174,37 +158,58 @@ h1{
 .projectsContainer{
     display:flex;
     flex-wrap:wrap;
-    row-gap: 2.5vw;
     justify-content: space-between;
+    margin: 5vw 0 0 30vw;
     /* outline: 3px solid lime; */
-    position: absolute;
-    right:2.5vw;
-    top:2.5vw;
+    row-gap: 2.5vw;
     width:65%;
 }
 .projectCard{
-    background-color:hsla(300, 75%, 25%, 10%);
-    border-radius:10px;
+    /* background-color:hsla(300, 75%, 25%, 10%); */
+    /* border-radius:10px; */
     color:hsl(300, 75%, 85%);    
     min-width:350px;
-    padding-inline: .75rem;;
+    padding-inline: .75rem;
+    text-align: center;
     width:47%;
+    
+}
+.projectCard h2 {
+    font-size: 2rem;
 }
 .projectCard > *:not(img){
     margin:.75rem 0 .75rem 0;
 }
-.projectCard img{
-    width:100%
+.projectCard > img{
+    
+    width:75%
 }
 .projectCard p:nth-of-type(2n){
     font-size:1.2rem;
+    white-space: nowrap;
 }
 .icon img{
     width:1.2rem;
 }
 
+/* CONTACT PAGE */
+.contactContent{
+    margin:10vw 0 0 75%;
+    width: 40vw;
+    /* outline:3px solid red; */
+}
+.contactContent p{
+    color: hsl(300, 75%, 85%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:clamp(1.25rem, 2.25vw, 3.5rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.contactContent img{
+    width:100%;
+}
 @media screen and (max-width: 1200px){
-/* COMMON STYLES ACROSS MULTIPLES PAGES */
+    /* COMMON STYLES ACROSS MULTIPLES PAGES */
     .nonIdxTriangle{
         height:7vw;
         rotate:0deg;
@@ -230,16 +235,66 @@ h1{
         width:100vw;
     }
     /* PAGE SPECIFIC STYLES */
+    .bioContent{
+        /* outline:2px solid lime; */
+        margin:10vw 0 0 17.5vw;
+    }
     .bioContent img{
-        width:25%;
+        margin-block:auto;
+        width:40%;
+    }
+    .contactContent{
+        margin-top:18vw;
+        /* outline:2px solid lime; */
+        /* width: 75vw; */
     }
     .contactContent img{
-        margin-left:27%;
-        width:50%;
+        
+        width:100%;
     }
     .projectsContainer{
-        top:8vw;
-        left:5vw;
+        margin-inline:auto;
+        margin-top:10vw;
+        row-gap:4vw;
         width:90%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    /* BIO PAGE */
+    .rightSide{
+        display:none;
+    }
+    .leftSide{
+        display:block;
+    }
+    .bioContent img{
+        margin-bottom:1rem;
+        margin-inline:auto;
+        width:50%;
+    }
+    .bioContent{
+        flex-direction: column;
+        /* outline:2px solid lime; */
+    }
+    .bioContentText{
+        margin-inline:auto;
+        text-align: center;
+        width:80%;
+    }
+    /* PROJECTS PAGE */
+    .projectsContainer{
+        flex-direction:column;
+        /* outline:2px solid lime; */
+    }
+    .projectCard{
+        margin-inline:auto;
+        width:75%;
+    }
+    /* CONTACT PAGE */
+    .contactContent{
+        margin: 25% 17%;
+        /* outline:2px solid lime; */
+        width:75vw;
     }
 }
