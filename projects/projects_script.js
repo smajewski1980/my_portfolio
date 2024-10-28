@@ -15,7 +15,7 @@ const descriptions = [
     desc: "description 3 - when this is a completed page, there will be this much text or less in this section",
   },
   {
-    title: "You are hovering on card # 4",
+    title: "New York State Assembly Home Page",
     desc: "description 4 - when this is a completed page, there will be this much text or less in this section",
   },
   {

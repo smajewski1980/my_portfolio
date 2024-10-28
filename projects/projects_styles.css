@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "RocherColorGX";
+  src: url("../assets/font/RocherColorGX-purple3.woff2")
+    format("woff2-variations");
+  line-gap-override: 85%;
+}
+
 *,
 *::after,
 *::before {
@@ -15,6 +22,7 @@ img {
 }
 
 body {
+  font-family: "RocherColorGX";
   background: url(../assets/bgs/numsBackgroundImage.png);
   min-height: 100vh;
 }
@@ -47,6 +55,48 @@ body {
 
 /* END LIGHT STYLES */
 
+.heading-wrapper {
+  width: 54.6875rem;
+  margin-inline: auto;
+  text-align: center;
+  text-wrap: nowrap;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.desc,
+.desc-title {
+  left: 50%;
+  position: absolute;
+  transform: translatex(-50%) translateZ(-3000px) translateY(1200px);
+  opacity: 0;
+  top: 2em;
+}
+
+.desc-title {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  font-variation-settings: "SHDW" 80, "BVEL" 70;
+}
+
+.desc {
+  font-size: 1.5rem;
+  top: 7em;
+  font-variation-settings: "SHDW" 100, "BVEL" 15;
+}
+
+.show-description {
+  animation: show-description 0.3s ease forwards;
+}
+
+@keyframes show-description {
+  to {
+    transform: translatex(-50%) translateZ(0px) translateY(0px);
+    opacity: 1;
+  }
+}
+
 .card-wrapper {
   width: 50vw;
   display: flex;
@@ -56,6 +106,7 @@ body {
   transform: rotatex(var(--perspective-rotateX));
   margin-top: 22rem;
   margin-inline: auto;
+  justify-content: center;
 }
 
 .card {
@@ -65,6 +116,9 @@ body {
   height: 200px;
   transition: all 0.25s ease;
   filter: blur(10px) brightness(0.5);
+  display: grid;
+  align-content: end;
+  padding-bottom: 1em;
 }
 
 .card:hover {
@@ -105,9 +159,12 @@ body {
   background-position-x: -85px;
 }
 .card:nth-child(4) {
-  background-image: url("../assets/images/anime_4.png");
-  background-size: 400px;
-  background-position-x: -80px;
+  background: rgba(124, 20, 153, 0.35);
+  /* background-image: url("../assets/images/anime_4.png"); */
+  background-image: url("../assets/images/projectThumbs/nysa_thumb.png");
+  background-size: 300px;
+  background-position-x: -30px;
+  background-repeat: no-repeat;
 }
 .card:nth-child(5) {
   background-image: url("../assets/images/anime_5.png");
@@ -125,40 +182,12 @@ body {
   background-position-x: -30px;
 }
 
-.heading-wrapper {
-  width: 875px;
-  margin-inline: auto;
-  text-align: center;
-  text-wrap: nowrap;
-  perspective: 800px;
-  transform-style: preserve-3d;
-  position: relative;
+.card-icons-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* outline: 2px solid lime; */
 }
 
-.desc,
-.desc-title {
-  color: rgb(255, 255, 255);
-  font-size: 3rem;
-  left: 50%;
-  position: absolute;
-  transform: translatex(-50%) translateZ(-3000px) translateY(1200px);
-  opacity: 0;
-  top: 2em;
-  text-shadow: 0px 3px 7px rgba(252, 194, 147, 0.7);
-}
-.desc {
-  font-size: 1.5rem;
-  top: 7em;
-  text-shadow: 0px 3px 7px rgba(252, 194, 147, 0.7);
-}
-
-.show-description {
-  animation: show-description 0.3s ease forwards;
-}
-
-@keyframes show-description {
-  to {
-    transform: translatex(-50%) translateZ(0px) translateY(0px);
-    opacity: 1;
-  }
+.icon {
+  max-width: 27%;
 }
