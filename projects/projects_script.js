@@ -1,6 +1,11 @@
 const descTitle = document.querySelector(".desc-title");
 const desc = document.querySelector(".desc");
-
+const cards = Array.from(document.getElementsByClassName("card"));
+const spotlight = document.querySelector(".spotlight");
+const descriptionTitle = document.querySelector(".desc-title");
+const description = document.querySelector(".desc");
+let headingVisible = false;
+let headingTimeout;
 const descriptions = [
   {
     title: "Cleaning Shellac 78s",
@@ -31,14 +36,6 @@ const descriptions = [
     desc: "description 7 - when this is a completed page, there will be this much text or less in this section",
   },
 ];
-
-const cards = Array.from(document.getElementsByClassName("card"));
-// const cardWrapper = document.querySelector(".card-wrapper");
-const spotlight = document.querySelector(".spotlight");
-const descriptionTitle = document.querySelector(".desc-title");
-const description = document.querySelector(".desc");
-let headingVisible = false;
-let headingTimeout;
 
 function showDescription() {
   if (headingTimeout) {
@@ -71,3 +68,13 @@ cards.forEach((card) => {
   card.addEventListener("mouseover", showDescription);
   card.addEventListener("mouseout", hideDescription);
 });
+
+// see if we can get two flames up and running
+
+const ltFl4Wrapper = document.querySelector(".lt-fl4-wr");
+const ltFlame4 = document.querySelector(".lt-fl4-wr .flame4");
+const rtFl4Wrapper = document.querySelector(".rt-fl4-wr");
+const rtFlame4 = document.querySelector(".rt-fl4-wr .flame4");
+
+populateSlides(ltFlame4, 52, "flame4", "flames");
+populateSlides(rtFlame4, 52, "flame4", "flames");
