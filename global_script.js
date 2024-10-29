@@ -1,7 +1,12 @@
-function populateSlides(divElem, slideQty, nameStr, folder) {
+function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;
+  let path;
   for (let i = 0; i < slideQty; i++) {
-    const path = `./assets/${folder}/${nameStr}/${i}.png`;
+    if (!pathUp) {
+      path = `./assets/${folder}/${nameStr}/${i}.png`;
+    } else {
+      path = `../assets/${folder}/${nameStr}/${i}.png`;
+    }
     const image = `<img src="${path}" alt=""/>`;
     innerMarkup += image;
   }

@@ -128,7 +128,7 @@ body {
 .card:hover {
   transform: translatez(150px);
   filter: blur(0px) brightness(1);
-  animation: bg-move 30s ease forwards;
+  animation: bg-move 30s linear forwards;
 }
 
 @keyframes bg-move {
@@ -190,4 +190,57 @@ body {
   position: absolute;
   inset: 0;
   z-index: 99;
+}
+
+/* flames */
+
+.projects-flame-wrapper {
+  width: 97dvw;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.fl4-w-2 {
+  bottom: 6.5rem;
+}
+
+.fl4-w-2 > * {
+  scale: 0.5;
+  margin-inline: 7rem;
+}
+
+.lt-fl4-wr,
+.rt-fl4-wr {
+  width: 250px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  filter: hue-rotate(290deg);
+}
+
+/* .flame4 > * {
+  min-width: 250px;
+} */
+
+.flame4 {
+  display: flex;
+}
+
+.flame-4-spark {
+  animation: flame4-run 2s steps(52) infinite;
+}
+
+.flame-4-fade-in {
+  opacity: 0.5;
+}
+
+@keyframes flame4-run {
+  to {
+    transform: translateX(-13000px);
+  }
 }
