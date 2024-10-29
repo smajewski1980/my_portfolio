@@ -3,15 +3,15 @@ const desc = document.querySelector(".desc");
 
 const descriptions = [
   {
-    title: "You are hovering on card # 1",
+    title: "Cleaning Shellac 78s",
     desc: "description 1 - when this is a completed page, there will be this much text or less in this section",
   },
   {
-    title: "You are hovering on card # 2",
+    title: "My Music Catalog v1",
     desc: "description 2 - when this is a completed page, there will be this much text or less in this section",
   },
   {
-    title: "You are hovering on card # 3",
+    title: "My Music Catalog v2",
     desc: "description 3 - when this is a completed page, there will be this much text or less in this section",
   },
   {
@@ -19,15 +19,15 @@ const descriptions = [
     desc: "description 4 - when this is a completed page, there will be this much text or less in this section",
   },
   {
-    title: "You are hovering on card # 5",
+    title: "Assembly Sound Off(the floor)",
     desc: "description 5 - when this is a completed page, there will be this much text or less in this section",
   },
   {
-    title: "You are hovering on card # 6",
+    title: "Empire State Aerosciences Museum Visit Page",
     desc: "description 6 - when this is a completed page, there will be this much text or less in this section",
   },
   {
-    title: "You are hovering on card # 7",
+    title: "Bookmark Landing Page",
     desc: "description 7 - when this is a completed page, there will be this much text or less in this section",
   },
 ];
