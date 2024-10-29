@@ -102,9 +102,12 @@ body {
   display: flex;
   perspective: 600px;
   perspective-origin: bottom;
+  /* perspective-origin: top; */
   transform-style: preserve-3d;
   transform: rotatex(var(--perspective-rotateX));
-  margin-top: 22rem;
+  /* margin-top: 22rem; */
+  /* margin-top: 25rem; */
+  margin-top: 45vh;
   margin-inline: auto;
   justify-content: center;
 }
@@ -207,6 +210,7 @@ body {
 
 .fl4-w-2 {
   bottom: 6.5rem;
+  filter: blur(2px);
 }
 
 .fl4-w-2 > * {
@@ -222,10 +226,6 @@ body {
   transition: opacity 0.75s ease;
   filter: hue-rotate(290deg);
 }
-
-/* .flame4 > * {
-  min-width: 250px;
-} */
 
 .flame4 {
   display: flex;
