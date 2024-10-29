@@ -115,8 +115,7 @@ body {
   width: 125px;
   height: 200px;
   /* transition: all 0.25s ease; */
-  transition: transform 0.25s ease, filter 0.25s ease,
-    background-position 20s linear;
+  transition: transform 0.25s ease, filter 0.25s ease;
   filter: blur(10px) brightness(0.5);
   display: grid;
   align-content: end;
@@ -129,7 +128,13 @@ body {
 .card:hover {
   transform: translatez(150px);
   filter: blur(0px) brightness(1);
-  background-position: 100% 0;
+  animation: bg-move 30s ease forwards;
+}
+
+@keyframes bg-move {
+  to {
+    background-position: -175px 0%;
+  }
 }
 
 .card:hover + * {
@@ -151,32 +156,24 @@ body {
 
 .card:nth-child(1) {
   background-image: url("../assets/images/projectThumbs/cleaning_78s_thumb.png");
-  /* background-position-x: -75px; */
 }
 .card:nth-child(2) {
   background-image: url("../assets/images/projectThumbs/musicCatalogThumb.png");
-  /* background-position-x: -85px; */
-  background-position-y: -15px;
 }
 .card:nth-child(3) {
   background-image: url("../assets/images/projectThumbs/music_catalog_2.0_thumb.png");
-  /* background-position-x: -25px; */
 }
 .card:nth-child(4) {
   background-image: url("../assets/images/projectThumbs/nysa_thumb.png");
-  /* background-position-x: -30px; */
 }
 .card:nth-child(5) {
   background-image: url("../assets/images/projectThumbs/assy_sound_off_thumb.png");
-  /* background-position-x: -20px; */
 }
 .card:nth-child(6) {
   background-image: url("../assets/images/projectThumbs/esam_thumb.png");
-  /* background-position-x: -85px; */
 }
 .card:nth-child(7) {
   background-image: url("../assets/images/projectThumbs/bookmark_thumb.png");
-  /* background-position-x: -45px; */
 }
 
 .card-icons-wrapper {
