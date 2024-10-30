@@ -7,6 +7,8 @@ fireLoop1.volume = 0.5;
 const fireLoop3 = new Audio("../assets/sounds/fire_loop_1.mp3");
 fireLoop3.loop = true;
 fireLoop1.volume = 0.3;
+const boing1 = new Audio("../assets/sounds/boing_1.mp3");
+const springboard = new Audio("../assets/sounds/springboard.mp3");
 
 function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;

@@ -209,6 +209,8 @@ function runNavExplosion() {
   fireLoop1.load();
   fireLoop2.load();
   fireLoop3.load();
+  springboard.play();
+  boing1.play();
   navExplosion.classList.add("nav-explosion-spark");
   setTimeout(() => {
     navExplosion.parentElement.remove();
