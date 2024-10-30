@@ -5,8 +5,3 @@ Portfolio Notes
 
 
 The above binary code says "This is Steve's portfolio page"
-
-purple #8e148e
-
-content div positioning for hamburger - top -350, left -400
-                            open - top -200, left -375
