@@ -18,6 +18,7 @@ const sparkCloser = new Audio("../assets/sounds/tiny_mortar_2.mp3");
 sparkCloser.volume = 0.5;
 const sparkClose = new Audio("../assets/sounds/tiny_mortar_2.mp3");
 sparkClose.volume = 0.7;
+const fireWhoosh = new Audio("../assets/sounds/fire_whoosh.mp3");
 
 function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;

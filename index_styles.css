@@ -48,11 +48,11 @@ body {
     transform: translateX(0px);
   }
   55% {
-    transform: translateX(350px);
+    transform: translateX(525px);
   }
 
   100% {
-    transform: translateX(1925px);
+    transform: translateX(2500px);
   }
 }
 

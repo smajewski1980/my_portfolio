@@ -190,6 +190,7 @@ function runSmokePuff() {
 
 function runSmokePuff2() {
   smokePuff2.classList.add("smoke-puff-2-spark");
+  fireWhoosh.play();
   setTimeout(() => {
     flame3Arr.forEach((flame) => {
       flame.parentElement.style.setProperty(
@@ -284,7 +285,6 @@ function MasterSeq() {
     flame6_4W_X.classList.add("fl-6-4-move-x");
     setTimeout(() => {
       fireLoop2.play();
-      fireLoop3.load();
       runFlame3(flame3_3);
       runFlame3(flame3_4);
       flame3_3.style.opacity = "1";
@@ -302,7 +302,7 @@ function MasterSeq() {
     flame6_6W_X.classList.add("fl-6-6-move-x");
     setTimeout(() => {
       fireLoop1.play();
-      // fireLoop2.load();
+      fireLoop3.load();
       runFlame3(flame3_1);
       runFlame3(flame3_2);
       flame3_1.style.opacity = "1";
