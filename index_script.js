@@ -211,6 +211,7 @@ function runNavExplosion() {
   fireLoop3.load();
   springboard.play();
   boing1.play();
+  finalReveal.play();
   navExplosion.classList.add("nav-explosion-spark");
   setTimeout(() => {
     navExplosion.parentElement.remove();
@@ -241,6 +242,8 @@ function MasterSeq() {
     btnEnter.remove();
   }, 750);
   setTimeout(() => {
+    // sound here
+    sparkClose.play();
     runSmokePuff();
   }, 250);
   runFlame6(flame6_1);
