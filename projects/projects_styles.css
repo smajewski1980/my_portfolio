@@ -31,24 +31,25 @@ body {
 .light-img-wrapper {
   width: 125px;
   margin-inline: auto;
+  filter: hue-rotate(225deg);
   opacity: 0.8;
-  transform-origin: bottom center;
+  /* transform-origin: bottom center; */
 }
 
 .spotlight {
-  --light-brightness: 0.5;
+  --light-brightness: 0.3;
   width: 85vw;
-  height: 600px;
+  height: 750px;
   left: 50%;
   top: 7.5rem;
   background: conic-gradient(
     transparent 110deg,
-    rgba(252, 194, 147, var(--light-brightness)),
+    rgba(244, 112, 227, var(--light-brightness)),
     transparent 250deg
   );
   filter: blur(35px) brightness(1);
   transform: translate(-50%, -55%);
-  border-bottom: 5px solid rgb(167, 131, 2);
+  border-bottom: 3px solid rgb(244, 112, 227);
   position: absolute;
   transition: filter 0.3s ease;
 }
@@ -223,8 +224,25 @@ body {
   width: 250px;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.75s ease;
   filter: hue-rotate(290deg);
+}
+
+.front-fade-in {
+  animation: front-fade-in 10s ease forwards;
+}
+
+@keyframes front-fade-in {
+  to {
+    opacity: 0.6;
+  }
+}
+.rear-fade-in {
+  animation: rear-fade-in 10s ease forwards;
+}
+@keyframes rear-fade-in {
+  to {
+    opacity: 0.6;
+  }
 }
 
 .flame4 {
@@ -232,11 +250,7 @@ body {
 }
 
 .flame-4-spark {
-  animation: flame4-run 2s steps(52) infinite;
-}
-
-.flame-4-fade-in {
-  opacity: 0.5;
+  animation: flame4-run var(--fl4-anim-timing) steps(52) infinite;
 }
 
 @keyframes flame4-run {
