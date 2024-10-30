@@ -19,6 +19,9 @@ sparkCloser.volume = 0.5;
 const sparkClose = new Audio("../assets/sounds/tiny_mortar_2.mp3");
 sparkClose.volume = 0.7;
 const fireWhoosh = new Audio("../assets/sounds/fire_whoosh.mp3");
+const floorSpark = new Audio("../assets/sounds/floor_spark.mp3");
+floorSpark.volume = 0.2;
+const floorFlame = new Audio("../assets/sounds/floor_flame.mp3");
 
 function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;

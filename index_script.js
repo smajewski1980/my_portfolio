@@ -319,6 +319,8 @@ function MasterSeq() {
     populateSlides(flame6_1_rnd2, 24, "flame6", "flames");
     runFlame6(flame6_1_rnd2);
     setTimeout(() => {
+      floorSpark.play();
+      floorFlame.play();
       flame6_1_rnd2W.classList.add("fl-6-1-rnd2-move");
       setTimeout(() => {
         setTimeout(() => {
@@ -334,6 +336,8 @@ function MasterSeq() {
       runFlame6(flame6_2_rnd2);
       setTimeout(() => {
         flame6_2_rnd2W.classList.add("fl-6-2-rnd2-move");
+        floorSpark.play();
+        floorFlame.play();
         setTimeout(() => {
           setTimeout(() => {
             flame5_2.parentElement.remove();
@@ -348,6 +352,8 @@ function MasterSeq() {
         runFlame6(flame6_3_rnd2);
         setTimeout(() => {
           flame6_3_rnd2W.classList.add("fl-6-3-rnd2-move");
+          floorSpark.play();
+          floorFlame.play();
           setTimeout(() => {
             setTimeout(() => {
               flame5_3.parentElement.remove();
