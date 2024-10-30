@@ -45,6 +45,8 @@ const ltFlame4Rear = document.querySelector(".fl4-w-2 .lt-fl4-wr .flame4");
 const rtFl4WrapperRear = document.querySelector(".fl4-w-2 .rt-fl4-wr");
 const rtFlame4Rear = document.querySelector(".fl4-w-2 .rt-fl4-wr .flame4");
 
+// fireLoop1.volume = 0.3;
+
 function showDescription() {
   if (headingTimeout) {
     clearInterval(headingTimeout);
@@ -96,6 +98,9 @@ function startFl4sStaggered() {
 }
 
 function fadeInFl4s() {
+  setTimeout(() => {
+    fireLoop3.play();
+  }, 3000);
   ltFl4Wrapper.classList.add("front-fade-in");
   rtFl4Wrapper.classList.add("front-fade-in");
   ltFl4WrapperRear.classList.add("rear-fade-in");

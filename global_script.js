@@ -1,3 +1,13 @@
+const fireLoop1 = new Audio("../assets/sounds/fire_loop_1.mp3");
+fireLoop1.loop = true;
+fireLoop1.volume = 0.7;
+const fireLoop2 = new Audio("../assets/sounds/fire_loop_1.mp3");
+fireLoop2.loop = true;
+fireLoop1.volume = 0.5;
+const fireLoop3 = new Audio("../assets/sounds/fire_loop_1.mp3");
+fireLoop3.loop = true;
+fireLoop1.volume = 0.3;
+
 function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;
   let path;

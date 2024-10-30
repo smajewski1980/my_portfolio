@@ -212,11 +212,12 @@ body {
 .fl4-w-2 {
   bottom: 6.5rem;
   filter: blur(2px);
+  z-index: -1;
 }
 
 .fl4-w-2 > * {
   scale: 0.5;
-  margin-inline: 7rem;
+  margin-inline: 6rem;
 }
 
 .lt-fl4-wr,
