@@ -165,16 +165,23 @@ function flame8Seq() {
   populateSlides(flame8_3, 31, "flame8", "flames");
   setTimeout(() => {
     runFlame8(flame8_1);
+    thickSlime.play();
     setTimeout(() => {
       flame8_1.parentElement.remove();
     }, 3000);
     setTimeout(() => {
       runFlame8(flame8_2);
+      thickSlime.volume = 0.3;
+      thickSlime.load();
+      thickSlime.play();
       setTimeout(() => {
         flame8_2.parentElement.remove();
       }, 3000);
       setTimeout(() => {
         runFlame8(flame8_3);
+        thickSlime.volume = 0.5;
+        thickSlime.load();
+        thickSlime.play();
         setTimeout(() => {
           flame8_3.parentElement.remove();
         }, 3000);
@@ -299,9 +306,6 @@ function MasterSeq() {
       fireworkWhistle.volume = 0.3;
       fireworkWhistle.load();
       fireworkWhistle.play();
-      setTimeout(() => {
-        fireworkWhistle.play();
-      }, 250);
       timeouts.push(
         setTimeout(() => {
           fireLoop2.play();
@@ -325,9 +329,6 @@ function MasterSeq() {
       flame6_6W_X.classList.add("fl-6-6-move-x");
       fireworkWhistle.volume = 0.5;
       fireworkWhistle.play();
-      setTimeout(() => {
-        fireworkWhistle.play();
-      }, 250);
       timeouts.push(
         setTimeout(() => {
           fireLoop1.play();

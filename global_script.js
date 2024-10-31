@@ -28,6 +28,8 @@ floorFlame.volume = 0.2;
 // sizzleShort.volume = 0.05;
 const fireworkWhistle = new Audio("../assets/sounds/firework_whistle.mp3");
 fireworkWhistle.volume = 0.1;
+const thickSlime = new Audio("../assets/sounds/thick_slime.mp3");
+thickSlime.volume = 0.1;
 
 const audioArray = [
   fireLoop1,
