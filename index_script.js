@@ -248,7 +248,6 @@ function MasterSeq() {
     timeouts.push(
       setTimeout(() => {
         sparkClose.play();
-        sizzleShort.play();
         runSmokePuff();
       }, 250)
     )
@@ -263,6 +262,7 @@ function MasterSeq() {
       runFlame6(flame6_4);
       flame6_1W.classList.add("fl-6-1-move-y");
       flame6_1W_X.classList.add("fl-6-1-move-x");
+      fireworkWhistle.play();
       timeouts.push(
         setTimeout(() => {
           runFlame3(flame3_6);
@@ -276,6 +276,8 @@ function MasterSeq() {
   setTimeout(() => {
     flame6_2W.classList.add("fl-6-2-move-y");
     flame6_2W_X.classList.add("fl-6-2-move-x");
+    fireworkWhistle.load();
+    fireworkWhistle.play();
     populateSlides(flame6_5, 24, "flame6", "flames");
     populateSlides(flame6_6, 24, "flame6", "flames");
     runFlame6(flame6_5);
@@ -294,6 +296,12 @@ function MasterSeq() {
       flame6_3W_X.classList.add("fl-6-3-move-x");
       flame6_4W.classList.add("fl-6-4-move-y");
       flame6_4W_X.classList.add("fl-6-4-move-x");
+      fireworkWhistle.volume = 0.3;
+      fireworkWhistle.load();
+      fireworkWhistle.play();
+      setTimeout(() => {
+        fireworkWhistle.play();
+      }, 250);
       timeouts.push(
         setTimeout(() => {
           fireLoop2.play();
@@ -315,11 +323,16 @@ function MasterSeq() {
       flame6_5W_X.classList.add("fl-6-5-move-x");
       flame6_6W.classList.add("fl-6-5-move-y");
       flame6_6W_X.classList.add("fl-6-6-move-x");
+      fireworkWhistle.volume = 0.5;
+      fireworkWhistle.play();
+      setTimeout(() => {
+        fireworkWhistle.play();
+      }, 250);
       timeouts.push(
         setTimeout(() => {
           fireLoop1.play();
           fireLoop3.load();
-          sizzleShort.load();
+          // sizzleShort.load();
           runFlame3(flame3_1);
           runFlame3(flame3_2);
           flame3_1.style.opacity = "1";
@@ -411,7 +424,7 @@ function abortAnimation() {
   for (var i = 0; i < timeouts.length; i++) {
     clearTimeout(timeouts[i]);
   }
-  sizzleShort.load();
+  // sizzleShort.load();
   setBodyBg();
   finalSeq();
 }

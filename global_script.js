@@ -22,9 +22,12 @@ const fireWhoosh = new Audio("../assets/sounds/fire_whoosh.mp3");
 const floorSpark = new Audio("../assets/sounds/floor_spark.mp3");
 floorSpark.volume = 0.2;
 const floorFlame = new Audio("../assets/sounds/floor_flame.mp3");
-const sizzleShort = new Audio("../assets/sounds/sizzle_short.mp3");
-sizzleShort.loop = true;
-sizzleShort.volume = 0.05;
+floorFlame.volume = 0.2;
+// const sizzleShort = new Audio("../assets/sounds/sizzle_short.mp3");
+// sizzleShort.loop = true;
+// sizzleShort.volume = 0.05;
+const fireworkWhistle = new Audio("../assets/sounds/firework_whistle.mp3");
+fireworkWhistle.volume = 0.1;
 
 const audioArray = [
   fireLoop1,
