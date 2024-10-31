@@ -30,6 +30,12 @@ const fireworkWhistle = new Audio("../assets/sounds/firework_whistle.mp3");
 fireworkWhistle.volume = 0.1;
 const thickSlime = new Audio("../assets/sounds/thick_slime.mp3");
 thickSlime.volume = 0.1;
+const churchBell1 = new Audio("../assets/sounds/church_bell_1.mp3");
+churchBell1.volume = 0.25;
+const churchBell2 = new Audio("../assets/sounds/church_bell_2.mp3");
+churchBell2.volume = 0.4;
+const bell3 = new Audio("../assets/sounds/bell_can_i_help_you.mp3");
+bell3.volume = 0.4;
 
 const audioArray = [
   fireLoop1,

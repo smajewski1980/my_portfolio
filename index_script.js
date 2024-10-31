@@ -88,16 +88,21 @@ function flame2Seq() {
   }, 350);
   setTimeout(() => {
     runFlame2(flame2_1, textReveal_1, "1");
+    churchBell1.play();
     setTimeout(() => {
       textReveal_1.classList.add("text-reveal-move-1-final");
     }, 9000);
     setTimeout(() => {
       runFlame2(flame2_2, textReveal_2, "2");
+      churchBell2.play();
       setTimeout(() => {
         textReveal_2.classList.add("text-reveal-move-2-final");
       }, 7050);
       setTimeout(() => {
         runFlame2(flame2_3, textReveal_3, "3");
+        setTimeout(() => {
+          bell3.play();
+        }, 300);
         setTimeout(() => {
           setBodyBg();
           runSmokePuff2();
