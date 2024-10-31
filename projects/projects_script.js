@@ -4,8 +4,8 @@ const cards = Array.from(document.getElementsByClassName("card"));
 const spotlight = document.querySelector(".spotlight");
 const descriptionTitle = document.querySelector(".desc-title");
 const description = document.querySelector(".desc");
-let headingVisible = false;
-let headingTimeout;
+let infoVisible = false;
+let infoTimeout;
 const descriptions = [
   {
     title: "Cleaning Shellac 78s",
@@ -48,29 +48,29 @@ const rtFlame4Rear = document.querySelector(".fl4-w-2 .rt-fl4-wr .flame4");
 // fireLoop1.volume = 0.3;
 
 function showDescription() {
-  if (headingTimeout) {
-    clearInterval(headingTimeout);
+  if (infoTimeout) {
+    clearInterval(infoTimeout);
   }
   spotlight.style.filter = "blur(35px) brightness(0.5)";
   const thisCard = this.dataset.card;
   const thisDesc = descriptions[parseInt(thisCard) - 1];
   descTitle.textContent = thisDesc.title;
   desc.textContent = thisDesc.desc;
-  if (!headingVisible) {
+  if (!infoVisible) {
     descTitle.classList.toggle("show-description");
     desc.classList.toggle("show-description");
-    headingVisible = true;
+    infoVisible = true;
   }
 }
 
 function hideDescription() {
-  headingTimeout = setTimeout(() => {
+  infoTimeout = setTimeout(() => {
     spotlight.style.filter = "blur(35px) brightness(1)";
     descTitle.classList.toggle("show-description");
     desc.classList.toggle("show-description");
     descTitle.textContent = "";
     desc.textContent = "";
-    headingVisible = false;
+    infoVisible = false;
   }, 100);
 }
 
