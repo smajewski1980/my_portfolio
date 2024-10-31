@@ -1,33 +1,6 @@
-@font-face {
-  font-family: "RocherColorGX";
-  src: url("./assets/font/RocherColorGX-purple3.woff2")
-    format("woff2-variations");
-  line-gap-override: 85%;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a,
-a:hover,
-a:visited {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
-
 body {
   background-color: rgb(18, 17, 17);
-  min-height: 100vh;
   overflow: hidden;
-  font-family: "RocherColorGX";
   background-size: cover;
 }
 
