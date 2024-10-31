@@ -15,8 +15,11 @@
 
 body {
   font-family: "RocherColorGX";
-
   min-height: 100vh;
+}
+
+.body-bg {
+  background: url(../assets/bgs/numsBackgroundImage.png);
 }
 
 img {
@@ -82,5 +85,67 @@ a:visited {
   to {
     top: 7.1%;
     left: 4.1%;
+  }
+}
+
+.pages-flame-wrapper {
+  width: 97dvw;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.fl4-w-2 {
+  bottom: 6.5rem;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.fl4-w-2 > * {
+  scale: 0.5;
+  margin-inline: 6rem;
+}
+
+.lt-fl4-wr,
+.rt-fl4-wr {
+  width: 250px;
+  overflow: hidden;
+  opacity: 0;
+  filter: hue-rotate(290deg);
+}
+
+.front-fade-in {
+  animation: front-fade-in 10s ease forwards;
+}
+
+@keyframes front-fade-in {
+  to {
+    opacity: 0.6;
+  }
+}
+.rear-fade-in {
+  animation: rear-fade-in 10s ease forwards;
+}
+@keyframes rear-fade-in {
+  to {
+    opacity: 0.6;
+  }
+}
+
+.flame4 {
+  display: flex;
+}
+
+.flame-4-spark {
+  animation: flame4-run var(--fl4-anim-timing) steps(52) infinite;
+}
+
+@keyframes flame4-run {
+  to {
+    transform: translateX(-13000px);
   }
 }
