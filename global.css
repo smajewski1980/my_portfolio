@@ -19,7 +19,7 @@ body {
 }
 
 .body-bg {
-  background: url(../assets/bgs/numsBackgroundImage.png);
+  background: url(./assets/bgs/numsBackgroundImage.png);
 }
 
 img {
