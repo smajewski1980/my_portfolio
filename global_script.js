@@ -22,6 +22,22 @@ const fireWhoosh = new Audio("../assets/sounds/fire_whoosh.mp3");
 const floorSpark = new Audio("../assets/sounds/floor_spark.mp3");
 floorSpark.volume = 0.2;
 const floorFlame = new Audio("../assets/sounds/floor_flame.mp3");
+const sizzleShort = new Audio("../assets/sounds/sizzle_short.mp3");
+sizzleShort.loop = true;
+sizzleShort.volume = 0.05;
+
+const audioArray = [
+  fireLoop1,
+  fireLoop2,
+  fireLoop3,
+  sparkFar,
+  sparkClose,
+  sparkCloser,
+  fireWhoosh,
+  floorSpark,
+  floorFlame,
+  sizzleShort,
+];
 
 function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;

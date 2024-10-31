@@ -52,6 +52,8 @@ const flame8_3 = document.querySelector(".fl-8-3 .flame8");
 const smokePuffWrapper = document.querySelector(".smoke-puff-wrapper");
 const smokePuff = document.querySelector(".smoke-puff");
 const smokePuff2 = document.querySelector(".smoke-puff-2");
+let timeouts = [];
+// all we need are the timeouts that play audio....
 
 function setBodyBg() {
   document.body.style.backgroundImage = 'url("./assets/bgs/bgImage.png")';
@@ -242,27 +244,35 @@ function MasterSeq() {
   setTimeout(() => {
     btnEnter.remove();
   }, 750);
-  setTimeout(() => {
-    // sound here
-    sparkClose.play();
-    runSmokePuff();
-  }, 250);
+  timeouts.push(
+    timeouts.push(
+      setTimeout(() => {
+        sparkClose.play();
+        sizzleShort.play();
+        runSmokePuff();
+      }, 250)
+    )
+  );
   runFlame6(flame6_1);
   runFlame6(flame6_2);
-  setTimeout(() => {
-    populateSlides(flame6_3, 24, "flame6", "flames");
-    populateSlides(flame6_4, 24, "flame6", "flames");
-    runFlame6(flame6_3);
-    runFlame6(flame6_4);
-    flame6_1W.classList.add("fl-6-1-move-y");
-    flame6_1W_X.classList.add("fl-6-1-move-x");
+  timeouts.push(
     setTimeout(() => {
-      runFlame3(flame3_6);
-      fireLoop3.play();
-      flame3_6.style.opacity = "1";
-      flame6_1W_X.remove();
-    }, 1000);
-  }, 3000);
+      populateSlides(flame6_3, 24, "flame6", "flames");
+      populateSlides(flame6_4, 24, "flame6", "flames");
+      runFlame6(flame6_3);
+      runFlame6(flame6_4);
+      flame6_1W.classList.add("fl-6-1-move-y");
+      flame6_1W_X.classList.add("fl-6-1-move-x");
+      timeouts.push(
+        setTimeout(() => {
+          runFlame3(flame3_6);
+          fireLoop3.play();
+          flame3_6.style.opacity = "1";
+          flame6_1W_X.remove();
+        }, 1000)
+      );
+    }, 3000)
+  );
   setTimeout(() => {
     flame6_2W.classList.add("fl-6-2-move-y");
     flame6_2W_X.classList.add("fl-6-2-move-x");
@@ -278,109 +288,130 @@ function MasterSeq() {
       populateSlides(flame3_4, 49, "flame3", "flames");
     }, 1000);
   }, 4000);
-  setTimeout(() => {
-    flame6_3W.classList.add("fl-6-3-move-y");
-    flame6_3W_X.classList.add("fl-6-3-move-x");
-    flame6_4W.classList.add("fl-6-4-move-y");
-    flame6_4W_X.classList.add("fl-6-4-move-x");
+  timeouts.push(
     setTimeout(() => {
-      fireLoop2.play();
-      runFlame3(flame3_3);
-      runFlame3(flame3_4);
-      flame3_3.style.opacity = "1";
-      flame3_4.style.opacity = "1";
-      flame6_3W_X.remove();
-      flame6_4W_X.remove();
-      populateSlides(flame3_1, 49, "flame3", "flames");
-      populateSlides(flame3_2, 49, "flame3", "flames");
-    }, 1000);
-  }, 5000);
-  setTimeout(() => {
-    flame6_5W.classList.add("fl-6-5-move-y");
-    flame6_5W_X.classList.add("fl-6-5-move-x");
-    flame6_6W.classList.add("fl-6-5-move-y");
-    flame6_6W_X.classList.add("fl-6-6-move-x");
+      flame6_3W.classList.add("fl-6-3-move-y");
+      flame6_3W_X.classList.add("fl-6-3-move-x");
+      flame6_4W.classList.add("fl-6-4-move-y");
+      flame6_4W_X.classList.add("fl-6-4-move-x");
+      timeouts.push(
+        setTimeout(() => {
+          fireLoop2.play();
+          runFlame3(flame3_3);
+          runFlame3(flame3_4);
+          flame3_3.style.opacity = "1";
+          flame3_4.style.opacity = "1";
+          flame6_3W_X.remove();
+          flame6_4W_X.remove();
+          populateSlides(flame3_1, 49, "flame3", "flames");
+          populateSlides(flame3_2, 49, "flame3", "flames");
+        }, 1000)
+      );
+    }, 5000)
+  );
+  timeouts.push(
     setTimeout(() => {
-      fireLoop1.play();
-      fireLoop3.load();
-      runFlame3(flame3_1);
-      runFlame3(flame3_2);
-      flame3_1.style.opacity = "1";
-      flame3_2.style.opacity = "1";
-      flame6_5W_X.remove();
-      flame6_6W_X.remove();
-    }, 1000);
-    flame5Seq();
-    flame8Seq();
-    populateNavLinksText();
-  }, 7000);
-  setTimeout(() => {
-    flame2Seq();
-    populateSlides(flame6_1_rnd2, 24, "flame6", "flames");
-    runFlame6(flame6_1_rnd2);
+      flame6_5W.classList.add("fl-6-5-move-y");
+      flame6_5W_X.classList.add("fl-6-5-move-x");
+      flame6_6W.classList.add("fl-6-5-move-y");
+      flame6_6W_X.classList.add("fl-6-6-move-x");
+      timeouts.push(
+        setTimeout(() => {
+          fireLoop1.play();
+          fireLoop3.load();
+          sizzleShort.load();
+          runFlame3(flame3_1);
+          runFlame3(flame3_2);
+          flame3_1.style.opacity = "1";
+          flame3_2.style.opacity = "1";
+          flame6_5W_X.remove();
+          flame6_6W_X.remove();
+        }, 1000)
+      );
+      flame5Seq();
+      flame8Seq();
+      populateNavLinksText();
+    }, 7000)
+  );
+  timeouts.push(
     setTimeout(() => {
-      floorSpark.play();
-      floorFlame.play();
-      flame6_1_rnd2W.classList.add("fl-6-1-rnd2-move");
-      setTimeout(() => {
+      flame2Seq();
+      populateSlides(flame6_1_rnd2, 24, "flame6", "flames");
+      runFlame6(flame6_1_rnd2);
+      timeouts.push(
         setTimeout(() => {
-          flame5_1.parentElement.remove();
-        }, 3000);
-      }, 200);
-      setTimeout(() => {
-        flame6_1_rnd2W.remove();
-      }, 1050);
-    }, 350);
-    setTimeout(() => {
-      populateSlides(flame6_2_rnd2, 24, "flame6", "flames");
-      runFlame6(flame6_2_rnd2);
-      setTimeout(() => {
-        flame6_2_rnd2W.classList.add("fl-6-2-rnd2-move");
-        floorSpark.play();
-        floorFlame.play();
-        setTimeout(() => {
-          setTimeout(() => {
-            flame5_2.parentElement.remove();
-          }, 2500);
-        }, 200);
-        setTimeout(() => {
-          flame6_2_rnd2W.remove();
-        }, 550);
-      }, 350);
-      setTimeout(() => {
-        populateSlides(flame6_3_rnd2, 24, "flame6", "flames");
-        runFlame6(flame6_3_rnd2);
-        setTimeout(() => {
-          flame6_3_rnd2W.classList.add("fl-6-3-rnd2-move");
           floorSpark.play();
           floorFlame.play();
+          flame6_1_rnd2W.classList.add("fl-6-1-rnd2-move");
           setTimeout(() => {
             setTimeout(() => {
-              flame5_3.parentElement.remove();
+              flame5_1.parentElement.remove();
             }, 3000);
           }, 200);
           setTimeout(() => {
-            flame6_3_rnd2W.remove();
+            flame6_1_rnd2W.remove();
           }, 1050);
-        }, 350);
-      }, 2000);
-    }, 2000);
-    setTimeout(() => {
-      btnSkipAnim.classList.add("btn-fade");
+        }, 350)
+      );
       setTimeout(() => {
-        btnSkipAnim.remove();
+        populateSlides(flame6_2_rnd2, 24, "flame6", "flames");
+        runFlame6(flame6_2_rnd2);
+        timeouts.push(
+          setTimeout(() => {
+            flame6_2_rnd2W.classList.add("fl-6-2-rnd2-move");
+            floorSpark.play();
+            floorFlame.play();
+            setTimeout(() => {
+              setTimeout(() => {
+                flame5_2.parentElement.remove();
+              }, 2500);
+            }, 200);
+            setTimeout(() => {
+              flame6_2_rnd2W.remove();
+            }, 550);
+          }, 350)
+        );
         setTimeout(() => {
-          animWrapper.remove();
-        }, 1000);
-      }, 750);
-    }, 11000);
-  }, 9000);
+          populateSlides(flame6_3_rnd2, 24, "flame6", "flames");
+          runFlame6(flame6_3_rnd2);
+          timeouts.push(
+            setTimeout(() => {
+              flame6_3_rnd2W.classList.add("fl-6-3-rnd2-move");
+              floorSpark.play();
+              floorFlame.play();
+              setTimeout(() => {
+                setTimeout(() => {
+                  flame5_3.parentElement.remove();
+                }, 3000);
+              }, 200);
+              setTimeout(() => {
+                flame6_3_rnd2W.remove();
+              }, 1050);
+            }, 350)
+          );
+        }, 2000);
+      }, 2000);
+      setTimeout(() => {
+        btnSkipAnim.classList.add("btn-fade");
+        setTimeout(() => {
+          btnSkipAnim.remove();
+          setTimeout(() => {
+            animWrapper.remove();
+          }, 1000);
+        }, 750);
+      }, 11000);
+    }, 9000)
+  );
 }
 
 function abortAnimation() {
   animWrapper.remove();
   btnSkipAnim.remove();
   btnEnter.remove();
+  for (var i = 0; i < timeouts.length; i++) {
+    clearTimeout(timeouts[i]);
+  }
+  sizzleShort.load();
   setBodyBg();
   finalSeq();
 }
