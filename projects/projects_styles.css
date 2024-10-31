@@ -56,6 +56,62 @@ body {
 
 /* END LIGHT STYLES */
 
+.heading-wrapper {
+  top: 7%;
+  left: 4%;
+  rotate: -15deg;
+  cursor: pointer;
+  font-size: 3.5vw;
+  display: grid;
+  position: absolute;
+  font-variation-settings: "SHDW" 35, "BVEL" 85;
+  transition: font-variation-settings 0.5s ease;
+  z-index: 99;
+}
+
+.heading-wrapper:hover,
+.heading-wrapper:focus-visible {
+  font-variation-settings: "SHDW" 15, "BVEL" 50;
+  animation: home-btn-move 0.5s ease forwards;
+}
+@keyframes home-btn-move {
+  to {
+    top: 7.1%;
+    left: 4.1%;
+  }
+}
+
+/* still need to make heading ?"floating letters"? animation */
+
+.heading-word {
+  display: flex;
+  letter-spacing: 12px;
+  line-height: 1.3;
+}
+
+.heading-word > * {
+  rotate: 15deg;
+}
+
+.page-title-wrapper {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  pointer-events: none;
+  font-size: 3.5vw;
+  font-variation-settings: "SHDW" 35, "BVEL" 85;
+  rotate: 15deg;
+}
+
+.page-title {
+  display: flex;
+  letter-spacing: 12px;
+}
+
+.page-title > * {
+  rotate: -15deg;
+}
+
 .info-wrapper {
   width: 54.6875rem;
   margin-inline: auto;
