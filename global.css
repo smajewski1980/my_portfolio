@@ -1,6 +1,6 @@
 @font-face {
   font-family: "RocherColorGX";
-  src: url("../assets/font/RocherColorGX-purple3.woff2")
+  src: url("./assets/font/RocherColorGX-purple3.woff2")
     format("woff2-variations");
   line-gap-override: 85%;
 }
