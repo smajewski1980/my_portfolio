@@ -9,11 +9,11 @@ let infoTimeout;
 const descriptions = [
   {
     title: "Cleaning Shellac 78s",
-    desc: "description 1 - when this is a completed page, there will be this much text or less in this section",
+    desc: "An early Codecademy project that is responsive, and will remain online as a collector's resource.",
   },
   {
     title: "My Music Catalog v1",
-    desc: "description 2 - when this is a completed page, there will be this much text or less in this section",
+    desc: "Version one, before I knew any JS. I just embedded PDFs in iframes. This was a personal tool, it is not responsive.",
   },
   {
     title: "My Music Catalog v2",
@@ -33,7 +33,7 @@ const descriptions = [
   },
   {
     title: "Bookmark Landing Page",
-    desc: "description 7 - when this is a completed page, there will be this much text or less in this section",
+    desc: "An early Frontend Mentor project, nothing fancy, not responsive.",
   },
 ];
 
