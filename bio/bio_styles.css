@@ -1,0 +1,27 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  min-height: 100vh;
+  margin-inline: auto;
+  margin-top: 5rem;
+  /* outline: 2px solid lime; */
+  font-variation-settings: "SHDW" 0, "BVEL" 0;
+}
+
+.bio-text {
+  display: grid;
+  gap: 1rem;
+}
+
+.bio-text p {
+  max-width: 47ch;
+  font-variation-settings: SHDW 0, BEVL 100;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.image-wrapper {
+  width: 40%;
+}
