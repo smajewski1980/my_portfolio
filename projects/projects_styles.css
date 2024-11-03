@@ -14,7 +14,7 @@
 .spotlight {
   --light-brightness: 0.3;
   width: 85vw;
-  height: 750px;
+  height: 800px;
   left: 50%;
   top: 7.5rem;
   background: conic-gradient(
@@ -47,20 +47,20 @@
   position: absolute;
   transform: translate3d(-50%, 1400px, -3000px);
   opacity: 0;
-  top: 10rem;
+  top: 3em;
 }
 
 .desc-title {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   letter-spacing: 5px;
   font-variation-settings: "SHDW" 80, "BVEL" 70;
 }
 
 .desc {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   letter-spacing: 2px;
   line-height: 1.4;
-  top: 15rem;
+  top: 8.5em;
   font-variation-settings: "SHDW" 100, "BVEL" 15;
 }
 
@@ -171,4 +171,14 @@
   position: absolute;
   inset: 0;
   z-index: 99;
+}
+
+@media screen and (width < 1700px) {
+  .info-wrapper {
+    top: -1rem;
+    font-size: 0.8rem;
+  }
+  .spotlight {
+    height: 600px;
+  }
 }
