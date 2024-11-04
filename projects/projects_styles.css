@@ -31,6 +31,17 @@
 
 /* END LIGHT STYLES */
 
+.portrait-wrapper {
+  position: absolute;
+  top: 60%;
+  left: 3%;
+}
+.graphic-design-wrapper {
+  position: absolute;
+  top: 60%;
+  right: 4%;
+}
+
 .info-wrapper {
   width: 54.6875rem;
   margin-inline: auto;
