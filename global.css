@@ -93,7 +93,7 @@ a:visited {
 .graphic-des-page-title {
   display: block;
   rotate: 15deg;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 @keyframes home-btn-move {
