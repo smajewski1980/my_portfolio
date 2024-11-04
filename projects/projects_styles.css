@@ -31,14 +31,14 @@
 
 /* END LIGHT STYLES */
 
-.portrait-wrapper {
-  position: absolute;
-  top: 60%;
-  left: 3%;
-}
 .graphic-design-wrapper {
   position: absolute;
-  top: 60%;
+  top: 55%;
+  left: 3%;
+}
+.portrait-wrapper {
+  position: absolute;
+  top: 55%;
   right: 4%;
 }
 
