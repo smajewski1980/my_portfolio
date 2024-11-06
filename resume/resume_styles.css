@@ -3,15 +3,19 @@
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  /* width: 20%; */
-  /* outline: 2px solid lime; */
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  /* column-gap: 2rem; */
   row-gap: 1rem;
   place-items: center;
 }
 
 .icons-wrapper img {
   width: 50px;
+}
+
+.resume-img-wrapper {
+  width: 25rem;
+  margin: 7rem auto 0;
+  text-align: center;
+  font-variation-settings: "SHDW" 0, "BVEL" 0;
 }
