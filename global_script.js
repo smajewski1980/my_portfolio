@@ -16,9 +16,9 @@ const finalReveal = new Audio("./assets/sounds/final_reveal.mp3");
 finalReveal.volume = 0.2;
 const sparkFar = new Audio("./assets/sounds/tiny_mortar_1.mp3");
 const sparkCloser = new Audio("./assets/sounds/tiny_mortar_2.mp3");
-sparkCloser.volume = 0.5;
+sparkCloser.volume = 0.2;
 const sparkClose = new Audio("./assets/sounds/tiny_mortar_2.mp3");
-sparkClose.volume = 0.7;
+sparkClose.volume = 0.4;
 const fireWhoosh = new Audio("./assets/sounds/fire_whoosh.mp3");
 const floorSpark = new Audio("./assets/sounds/floor_spark.mp3");
 floorSpark.volume = 0.2;
@@ -163,7 +163,7 @@ function fadeInFl4s() {
   setTimeout(() => {
     setTimeout(() => {
       fireLoop3.load();
-    }, 60000);
+    }, 30000);
     fireLoop3.play();
   }, 3000);
   ltFl4Wrapper.classList.add("front-fade-in");
