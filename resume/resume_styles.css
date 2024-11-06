@@ -15,14 +15,13 @@
 
 .resume-img-wrapper {
   width: 25rem;
-  margin: 12vh auto 0;
+  margin: 7vw auto 0;
   text-align: center;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
 }
 
 @media screen and (width < 1700px) {
   .icons-wrapper {
-    /* grid-template-columns: repeat(14, 1fr); */
-    bottom: 5%;
+    bottom: 3%;
   }
 }
