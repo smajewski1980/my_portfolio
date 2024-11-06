@@ -1,21 +1,28 @@
 .icons-wrapper {
   position: absolute;
-  bottom: 10%;
+  bottom: 12%;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   row-gap: 1rem;
   place-items: center;
 }
 
 .icons-wrapper img {
-  width: 50px;
+  width: 30px;
 }
 
 .resume-img-wrapper {
   width: 25rem;
-  margin: 7rem auto 0;
+  margin: 12vh auto 0;
   text-align: center;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
+}
+
+@media screen and (width < 1700px) {
+  .icons-wrapper {
+    /* grid-template-columns: repeat(14, 1fr); */
+    bottom: 5%;
+  }
 }

@@ -7,7 +7,7 @@ fireLoop2.loop = true;
 fireLoop2.volume = 0.5;
 const fireLoop3 = new Audio("../assets/sounds/fire_loop_1.mp3");
 fireLoop3.loop = true;
-fireLoop3.volume = 0.3;
+fireLoop3.volume = 0.1;
 const boing1 = new Audio("./assets/sounds/boing_1.mp3");
 boing1.volume = 0.6;
 const springboard = new Audio("./assets/sounds/springboard.mp3");
@@ -161,6 +161,9 @@ function startFl4sStaggered() {
 
 function fadeInFl4s() {
   setTimeout(() => {
+    setTimeout(() => {
+      fireLoop3.load();
+    }, 60000);
     fireLoop3.play();
   }, 3000);
   ltFl4Wrapper.classList.add("front-fade-in");
