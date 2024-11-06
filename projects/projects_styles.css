@@ -31,15 +31,27 @@
 
 /* END LIGHT STYLES */
 
-.graphic-design-wrapper {
+.graphic-design-wrapper,
+.portrait-wrapper {
   position: absolute;
+  scale: 0.85;
+  transition: filter 0.5s ease, scale 0.5s ease;
+  filter: brightness(0.5) blur(2px);
+}
+
+.graphic-design-wrapper {
   top: 55%;
   left: 3%;
 }
 .portrait-wrapper {
-  position: absolute;
   top: 55%;
   right: 4%;
+}
+
+.graphic-design-wrapper:hover,
+.portrait-wrapper:hover {
+  filter: brightness(1) blur(0);
+  scale: 1;
 }
 
 .info-wrapper {
