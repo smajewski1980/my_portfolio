@@ -6,11 +6,12 @@
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   row-gap: 1rem;
+  column-gap: 2.5rem;
   place-items: center;
 }
 
 .icons-wrapper img {
-  width: 30px;
+  max-width: 30px;
 }
 
 .resume-img-wrapper {
