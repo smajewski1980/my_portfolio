@@ -33,25 +33,33 @@
 
 .graphic-design-wrapper,
 .portrait-wrapper {
+  perspective: 600px;
+  perspective-origin: bottom;
+  transform-style: preserve-3d;
   position: absolute;
-  scale: 0.85;
-  transition: filter 0.5s ease, scale 0.5s ease;
+  /* scale: 0.85; */
+}
+
+.graphic-design-wrapper img,
+.portrait-wrapper img {
+  transition: filter 0.5s ease, transform 0.5s ease;
   filter: brightness(0.5) blur(2px);
 }
 
 .graphic-design-wrapper {
-  top: 55%;
+  top: 60%;
   left: 3%;
 }
 .portrait-wrapper {
-  top: 55%;
+  top: 60%;
   right: 4%;
 }
 
-.graphic-design-wrapper:hover,
-.portrait-wrapper:hover {
+.graphic-design-wrapper img:hover,
+.portrait-wrapper img:hover {
   filter: brightness(1) blur(0);
-  scale: 1;
+  /* scale: 1; */
+  transform: translate3d(0, -25px, 100px);
 }
 
 .info-wrapper {
@@ -103,11 +111,9 @@
   display: flex;
   perspective: 600px;
   perspective-origin: bottom;
-  /* perspective-origin: top; */
   transform-style: preserve-3d;
+  /* perspective-origin: top; */
   transform: rotatex(var(--perspective-rotateX));
-  /* margin-top: 22rem; */
-  /* margin-top: 25rem; */
   margin-top: 45vh;
   margin-inline: auto;
   justify-content: center;
