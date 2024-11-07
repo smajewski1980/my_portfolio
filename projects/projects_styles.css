@@ -132,12 +132,13 @@
 .card:hover {
   transform: translatez(150px);
   filter: blur(0px) brightness(1);
-  animation: bg-move 30s linear forwards;
+  animation: bg-move 20s linear forwards;
 }
 
 @keyframes bg-move {
   to {
-    background-position: -175px 0%;
+    /* background-position: -175px 0%; */
+    background-position: 100% 0%;
   }
 }
 
