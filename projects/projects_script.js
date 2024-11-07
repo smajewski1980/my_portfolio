@@ -29,7 +29,7 @@ const descriptions = [
   },
   {
     title: "Empire State Aerosciences Museum Visit Page",
-    desc: "I went there and thought this would be a fun page to build.</br>This one includes a few modals and an image gallery.",
+    desc: "I went there and thought this would be a fun page to build.</br>This one includes a few modals and an image gallery.</br>It also shows the live weather at the museum.",
   },
   {
     title: "Bookmark Landing Page",
