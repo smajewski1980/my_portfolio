@@ -116,15 +116,11 @@ const ltFlame4Rear = document.querySelector(".fl4-w-2 .lt-fl4-wr .flame4");
 const rtFl4WrapperRear = document.querySelector(".fl4-w-2 .rt-fl4-wr");
 const rtFlame4Rear = document.querySelector(".fl4-w-2 .rt-fl4-wr .flame4");
 
-function populateSlides(divElem, slideQty, nameStr, folder, pathUp) {
+function populateSlides(divElem, slideQty, nameStr, folder) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;
   let path;
   for (let i = 0; i < slideQty; i++) {
-    if (!pathUp) {
-      path = `./assets/${folder}/${nameStr}/${i}.png`;
-    } else {
-      path = `../assets/${folder}/${nameStr}/${i}.png`;
-    }
+    path = `/assets/${folder}/${nameStr}/${i}.png`;
     const image = `<img src="${path}" alt=""/>`;
     innerMarkup += image;
   }
