@@ -48,6 +48,7 @@
 
 .merry-go-round-item > * {
   position: absolute;
+  z-index: -5;
 }
 
 .merry-go-round-item p {
