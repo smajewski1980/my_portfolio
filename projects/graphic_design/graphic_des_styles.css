@@ -8,30 +8,31 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-  z-index: 99;
+  z-index: 5;
 }
 
 .merry-go-round-inner-wrapper {
   position: absolute;
   width: 200px;
   height: 250px;
-  top: 10%;
+  top: 50%;
   left: calc(50% - 100px);
   transform-style: preserve-3d;
   transform: perspective(1000px);
   animation: spin-it 60s linear infinite;
 }
 
-.merry-go-round-inner-wrapper:hover {
+.merry-go-round-inner-wrapper:hover,
+.merry-go-round-inner-wrapper:hover .gd-portrait-wrapper {
   animation-play-state: paused;
 }
 
 @keyframes spin-it {
   from {
-    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    transform: perspective(1000px) rotateX(5deg) rotateY(0deg);
   }
   to {
-    transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+    transform: perspective(1000px) rotateX(5deg) rotateY(360deg);
   }
 }
 .merry-go-round-item {
@@ -41,17 +42,46 @@
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )
     translatez(550px);
+  transform-style: preserve-3d;
 }
 
+.merry-go-round-item > * {
+  position: absolute;
+}
+
+.merry-go-round-item p {
+  bottom: 0;
+  width: 100%;
+}
 .merry-go-round-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  left: 0;
+  /* height: 100%; */
+  /* object-fit: cover; */
+}
+
+.merry-go-round-item img:last-child {
+  filter: blur(2px) brightness(0.4);
+  transform: translateZ(-1px);
 }
 
 .gd-portrait-wrapper {
-  position: absolute;
+  animation: spin-to-stay 60s linear infinite;
+}
+
+@keyframes spin-to-stay {
+  from {
+    transform: rotateY(0deg) translate3d(0, 0, 275px);
+  }
+  to {
+    transform: rotateY(-360deg) translate3d(0, 0, 275px);
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 1.5rem;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translatex(-50%);
+  font-size: 1.5rem;
 }
