@@ -81,9 +81,14 @@
   transform: translateZ(-1px);
 }
 
+.merry-go-round-item:nth-of-type(5) img {
+  width: 90%;
+  left: 5%;
+}
 .merry-go-round-item:nth-of-type(6) img {
-  scale: 0.7;
-  bottom: 30px;
+  width: 75%;
+  bottom: 75px;
+  left: 10%;
 }
 
 .gd-portrait-wrapper {
