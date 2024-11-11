@@ -1,13 +1,13 @@
 // main animation
 const fireLoop1 = new Audio("/assets/sounds/fire_loop_1.mp3");
 fireLoop1.loop = true;
-fireLoop1.volume = 0.7;
+fireLoop1.volume = 0.5;
 const fireLoop2 = new Audio("/assets/sounds/fire_loop_1.mp3");
 fireLoop2.loop = true;
-fireLoop2.volume = 0.5;
+fireLoop2.volume = 0.3;
 const fireLoop3 = new Audio("/assets/sounds/fire_loop_1.mp3");
 fireLoop3.loop = true;
-fireLoop3.volume = 0.1;
+fireLoop3.volume = 0.2;
 const boing1 = new Audio("./assets/sounds/boing_1.mp3");
 boing1.volume = 0.6;
 const springboard = new Audio("./assets/sounds/springboard.mp3");
@@ -21,19 +21,19 @@ const sparkClose = new Audio("./assets/sounds/tiny_mortar_2.mp3");
 sparkClose.volume = 0.2;
 const fireWhoosh = new Audio("./assets/sounds/fire_whoosh.mp3");
 const floorSpark = new Audio("./assets/sounds/floor_spark.mp3");
-floorSpark.volume = 0.2;
+floorSpark.volume = 0.1;
 const floorFlame = new Audio("./assets/sounds/floor_flame.mp3");
-floorFlame.volume = 0.2;
+floorFlame.volume = 0.1;
 const fireworkWhistle = new Audio("./assets/sounds/firework_whistle.mp3");
-fireworkWhistle.volume = 0.1;
+fireworkWhistle.volume = 0.2;
 const thickSlime = new Audio("./assets/sounds/thick_slime.mp3");
 thickSlime.volume = 0.1;
 const churchBell1 = new Audio("./assets/sounds/church_bell_1.mp3");
-churchBell1.volume = 0.25;
+churchBell1.volume = 0.2;
 const churchBell2 = new Audio("./assets/sounds/church_bell_2.mp3");
-churchBell2.volume = 0.4;
+churchBell2.volume = 0.3;
 const bell3 = new Audio("./assets/sounds/bell_can_i_help_you.mp3");
-bell3.volume = 0.4;
+bell3.volume = 0.3;
 
 const audioArray = [
   fireLoop1,

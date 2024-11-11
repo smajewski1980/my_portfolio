@@ -269,7 +269,7 @@ function MasterSeq() {
       flame6_3W_X.classList.add("fl-6-3-move-x");
       flame6_4W.classList.add("fl-6-4-move-y");
       flame6_4W_X.classList.add("fl-6-4-move-x");
-      fireworkWhistle.volume = 0.5;
+      fireworkWhistle.volume = 0.4;
       fireworkWhistle.load();
       fireworkWhistle.play();
       timeouts.push(
@@ -293,7 +293,7 @@ function MasterSeq() {
       flame6_5W_X.classList.add("fl-6-5-move-x");
       flame6_6W.classList.add("fl-6-5-move-y");
       flame6_6W_X.classList.add("fl-6-6-move-x");
-      fireworkWhistle.volume = 0.5;
+      fireworkWhistle.volume = 0.6;
       fireworkWhistle.play();
       timeouts.push(
         setTimeout(() => {
