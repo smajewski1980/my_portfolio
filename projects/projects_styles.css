@@ -59,7 +59,11 @@
 .portrait-wrapper img:hover {
   filter: brightness(1) blur(0);
   /* scale: 1; */
-  transform: translate3d(0, -25px, 100px);
+  transform: translate3d(10px, -5px, 100px);
+}
+
+.portrait-wrapper img:hover {
+  transform: translate3d(-10px, -5px, 100px);
 }
 
 .info-wrapper {
