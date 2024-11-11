@@ -29,36 +29,42 @@ function flame2Seq() {
       populateSlides(flame2_3, 14, "flame2", "flames");
     }, 350);
   }, 350);
-  setTimeout(() => {
-    runFlame2(flame2_1, textReveal_1, "1");
-    churchBell1.play();
+  timeouts.push(
     setTimeout(() => {
-      textReveal_1.classList.add("text-reveal-move-1-final");
-    }, 9000);
-    setTimeout(() => {
-      runFlame2(flame2_2, textReveal_2, "2");
-      churchBell2.play();
+      runFlame2(flame2_1, textReveal_1, "1");
+      churchBell1.play();
       setTimeout(() => {
-        textReveal_2.classList.add("text-reveal-move-2-final");
-      }, 7050);
-      setTimeout(() => {
-        runFlame2(flame2_3, textReveal_3, "3");
+        textReveal_1.classList.add("text-reveal-move-1-final");
+      }, 9000);
+      timeouts.push(
         setTimeout(() => {
-          bell3.play();
-        }, 300);
-        setTimeout(() => {
-          setBodyBg();
-          runSmokePuff2();
-        }, 4975);
-        setTimeout(() => {
-          textReveal_3.classList.add("text-reveal-move-3-final");
+          runFlame2(flame2_2, textReveal_2, "2");
+          churchBell2.play();
           setTimeout(() => {
-            finalSeq();
-          }, 400);
-        }, 5050);
-      }, 2000);
-    }, 1900);
-  }, 1650);
+            textReveal_2.classList.add("text-reveal-move-2-final");
+          }, 7050);
+          timeouts.push(
+            setTimeout(() => {
+              runFlame2(flame2_3, textReveal_3, "3");
+              setTimeout(() => {
+                bell3.play();
+              }, 300);
+              setTimeout(() => {
+                setBodyBg();
+                runSmokePuff2();
+              }, 4975);
+              setTimeout(() => {
+                textReveal_3.classList.add("text-reveal-move-3-final");
+                setTimeout(() => {
+                  finalSeq();
+                }, 400);
+              }, 5050);
+            }, 2000)
+          );
+        }, 1900)
+      );
+    }, 1650)
+  );
 }
 
 function runFlame3(flame3) {
@@ -81,15 +87,21 @@ function flame5Seq() {
   populateSlides(flame5_1, 83, "flame5", "flames");
   populateSlides(flame5_2, 83, "flame5", "flames");
   populateSlides(flame5_3, 83, "flame5", "flames");
-  setTimeout(() => {
-    runFlame5(flame5_1);
+  timeouts.push(
     setTimeout(() => {
-      runFlame5(flame5_2);
-      setTimeout(() => {
-        runFlame5(flame5_3);
-      }, 2000);
-    }, 2000);
-  }, 2500);
+      runFlame5(flame5_1);
+      timeouts.push(
+        setTimeout(() => {
+          runFlame5(flame5_2);
+          timeouts.push(
+            setTimeout(() => {
+              runFlame5(flame5_3);
+            }, 2000)
+          );
+        }, 2000)
+      );
+    }, 2500)
+  );
 }
 
 function runFlame6(flame6) {
@@ -111,31 +123,37 @@ function flame8Seq() {
   populateSlides(flame8_1, 31, "flame8", "flames");
   populateSlides(flame8_2, 31, "flame8", "flames");
   populateSlides(flame8_3, 31, "flame8", "flames");
-  setTimeout(() => {
-    runFlame8(flame8_1);
-    thickSlime.play();
+  timeouts.push(
     setTimeout(() => {
-      flame8_1.parentElement.remove();
-    }, 3000);
-    setTimeout(() => {
-      runFlame8(flame8_2);
-      thickSlime.volume = 0.3;
-      thickSlime.load();
+      runFlame8(flame8_1);
       thickSlime.play();
       setTimeout(() => {
-        flame8_2.parentElement.remove();
+        flame8_1.parentElement.remove();
       }, 3000);
-      setTimeout(() => {
-        runFlame8(flame8_3);
-        thickSlime.volume = 0.5;
-        thickSlime.load();
-        thickSlime.play();
+      timeouts.push(
         setTimeout(() => {
-          flame8_3.parentElement.remove();
-        }, 3000);
-      }, 2000);
-    }, 2000);
-  }, 3000);
+          runFlame8(flame8_2);
+          thickSlime.volume = 0.2;
+          thickSlime.load();
+          thickSlime.play();
+          setTimeout(() => {
+            flame8_2.parentElement.remove();
+          }, 3000);
+          timeouts.push(
+            setTimeout(() => {
+              runFlame8(flame8_3);
+              thickSlime.volume = 0.3;
+              thickSlime.load();
+              thickSlime.play();
+              setTimeout(() => {
+                flame8_3.parentElement.remove();
+              }, 3000);
+            }, 2000)
+          );
+        }, 2000)
+      );
+    }, 3000)
+  );
 }
 
 function runSmokePuff() {
@@ -251,7 +269,7 @@ function MasterSeq() {
       flame6_3W_X.classList.add("fl-6-3-move-x");
       flame6_4W.classList.add("fl-6-4-move-y");
       flame6_4W_X.classList.add("fl-6-4-move-x");
-      fireworkWhistle.volume = 0.3;
+      fireworkWhistle.volume = 0.5;
       fireworkWhistle.load();
       fireworkWhistle.play();
       timeouts.push(
@@ -281,7 +299,6 @@ function MasterSeq() {
         setTimeout(() => {
           fireLoop1.play();
           fireLoop3.load();
-          // sizzleShort.load();
           runFlame3(flame3_1);
           runFlame3(flame3_2);
           flame3_1.style.opacity = "1";
@@ -306,53 +323,51 @@ function MasterSeq() {
           floorFlame.play();
           flame6_1_rnd2W.classList.add("fl-6-1-rnd2-move");
           setTimeout(() => {
-            setTimeout(() => {
-              flame5_1.parentElement.remove();
-            }, 3000);
-          }, 200);
+            flame5_1.parentElement.remove();
+          }, 3000);
           setTimeout(() => {
             flame6_1_rnd2W.remove();
           }, 1050);
         }, 350)
       );
-      setTimeout(() => {
-        populateSlides(flame6_2_rnd2, 24, "flame6", "flames");
-        runFlame6(flame6_2_rnd2);
-        timeouts.push(
-          setTimeout(() => {
-            flame6_2_rnd2W.classList.add("fl-6-2-rnd2-move");
-            floorSpark.play();
-            floorFlame.play();
-            setTimeout(() => {
-              setTimeout(() => {
-                flame5_2.parentElement.remove();
-              }, 2500);
-            }, 200);
-            setTimeout(() => {
-              flame6_2_rnd2W.remove();
-            }, 550);
-          }, 350)
-        );
+      timeouts.push(
         setTimeout(() => {
-          populateSlides(flame6_3_rnd2, 24, "flame6", "flames");
-          runFlame6(flame6_3_rnd2);
+          populateSlides(flame6_2_rnd2, 24, "flame6", "flames");
+          runFlame6(flame6_2_rnd2);
           timeouts.push(
             setTimeout(() => {
-              flame6_3_rnd2W.classList.add("fl-6-3-rnd2-move");
+              flame6_2_rnd2W.classList.add("fl-6-2-rnd2-move");
               floorSpark.play();
               floorFlame.play();
               setTimeout(() => {
-                setTimeout(() => {
-                  flame5_3.parentElement.remove();
-                }, 3000);
-              }, 200);
+                flame5_2.parentElement.remove();
+              }, 2500);
               setTimeout(() => {
-                flame6_3_rnd2W.remove();
-              }, 1050);
+                flame6_2_rnd2W.remove();
+              }, 550);
             }, 350)
           );
-        }, 2000);
-      }, 2000);
+          timeouts.push(
+            setTimeout(() => {
+              populateSlides(flame6_3_rnd2, 24, "flame6", "flames");
+              runFlame6(flame6_3_rnd2);
+              timeouts.push(
+                setTimeout(() => {
+                  flame6_3_rnd2W.classList.add("fl-6-3-rnd2-move");
+                  floorSpark.play();
+                  floorFlame.play();
+                  setTimeout(() => {
+                    flame5_3.parentElement.remove();
+                  }, 3000);
+                  setTimeout(() => {
+                    flame6_3_rnd2W.remove();
+                  }, 1050);
+                }, 350)
+              );
+            }, 2000)
+          );
+        }, 2000)
+      );
       setTimeout(() => {
         btnSkipAnim.classList.add("btn-fade");
         setTimeout(() => {
@@ -370,10 +385,9 @@ function abortAnimation() {
   animWrapper.remove();
   btnSkipAnim.remove();
   btnEnter.remove();
-  for (var i = 0; i < timeouts.length; i++) {
+  for (let i = 0; i < timeouts.length; i++) {
     clearTimeout(timeouts[i]);
   }
-  // sizzleShort.load();
   setBodyBg();
   finalSeq();
 }
