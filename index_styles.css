@@ -650,17 +650,19 @@ li:nth-of-type(3):focus-visible {
 }
 .fl-8-2 {
   top: 185px;
-  left: 115px;
+  left: 130px;
   width: 500px;
   opacity: 0.85;
   scale: 105%;
   filter: hue-rotate(290deg) blur(2px);
+  rotate: -4deg;
 }
 .fl-8-3 {
   top: 170px;
-  left: 60px;
+  left: 90px;
   width: 600px;
   scale: 115%;
+  rotate: -3deg;
 }
 
 .fl-8-1 .flame8 > * {
@@ -693,14 +695,14 @@ li:nth-of-type(3):focus-visible {
   filter: hue-rotate(315deg) blur(3px) brightness(1.25);
 }
 .fl-2-2 {
-  top: 150px;
-  left: 212px;
+  top: 135px;
+  left: 220px;
   width: 300px;
   filter: hue-rotate(315deg) blur(2px) brightness(1.25);
 }
 .fl-2-3 {
   top: 100px;
-  left: 160px;
+  left: 175px;
   width: 400px;
   filter: hue-rotate(315deg) blur(0px) brightness(1.25);
 }
