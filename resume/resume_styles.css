@@ -23,6 +23,9 @@
 
 @media screen and (width < 1700px) {
   .icons-wrapper {
-    bottom: 3%;
+    bottom: 5%;
+  }
+  .resume-img-wrapper {
+    width: 23rem;
   }
 }
