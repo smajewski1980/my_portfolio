@@ -21,7 +21,8 @@ main {
 
 .bio-text p {
   max-width: 47ch;
-  font-variation-settings: SHDW 0, BEVL 100;
+  font-variation-settings: SHDW 0, BEVL 0;
+  filter: brightness(0.85);
   text-align: center;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -32,11 +33,15 @@ main {
     width: 60vw;
     justify-content: center;
     gap: 2rem;
+    margin-top: 3rem;
   }
   .bio-text {
     gap: 0.5rem;
   }
   .bio-text p {
     max-width: 50ch;
+  }
+  .bio-image-wrapper {
+    width: 15vw;
   }
 }
