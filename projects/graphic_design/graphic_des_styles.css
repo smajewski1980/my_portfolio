@@ -86,8 +86,8 @@
   left: 5%;
 }
 .merry-go-round-item:nth-of-type(6) img {
-  width: 75%;
-  bottom: 75px;
+  width: 70%;
+  bottom: 60px;
   left: 10%;
 }
 
@@ -111,4 +111,10 @@ footer {
   transform: translatex(-50%);
   font-variation-settings: "SHDW" 0, "BVEL" 100;
   letter-spacing: 1px;
+}
+
+@media screen and (width < 1700px) {
+  .merry-go-round-wrapper {
+    scale: 0.75;
+  }
 }
