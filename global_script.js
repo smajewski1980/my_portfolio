@@ -101,6 +101,10 @@ const flame8_3 = document.querySelector(".fl-8-3 .flame8");
 const smokePuffWrapper = document.querySelector(".smoke-puff-wrapper");
 const smokePuff = document.querySelector(".smoke-puff");
 const smokePuff2 = document.querySelector(".smoke-puff-2");
+
+// all timeouts that make noise i push to the below array so that they
+// can all be cleared if the skip animation button is pushed after the
+// animation starts
 let timeouts = [];
 
 // end main animation
