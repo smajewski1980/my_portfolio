@@ -1,3 +1,10 @@
+// let width = window.innerWidth;
+// console.log(width);
+// setInterval(() => {
+//   newWidth = window.innerWidth;
+//   if (newWidth !== width) console.log(newWidth);
+// }, 100);
+
 // main animation
 const fireLoop1 = new Audio("/assets/sounds/fire_loop_1.mp3");
 fireLoop1.loop = true;

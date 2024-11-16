@@ -14,7 +14,7 @@
 }
 
 :root {
-  --font-fallback: rgb(244, 112, 227);
+  --font-fallback: rgb(249, 157, 237);
 }
 
 body {
@@ -179,5 +179,11 @@ a:visited {
 @keyframes flame4-run {
   to {
     transform: translateX(-13000px);
+  }
+}
+
+@media screen and (width < 1200px) {
+  .pages-flame-wrapper {
+    bottom: 2rem;
   }
 }
