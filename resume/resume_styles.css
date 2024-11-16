@@ -29,3 +29,9 @@
     width: 23rem;
   }
 }
+
+@media screen and (width < 1200px) {
+  .resume-img-wrapper {
+    width: 25vw;
+  }
+}
