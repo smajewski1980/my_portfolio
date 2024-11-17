@@ -231,4 +231,20 @@
     top: 35%;
     right: 4%;
   }
+  .desc {
+    text-wrap: wrap;
+    width: 47ch;
+  }
+  .card-wrapper {
+    width: 75vw;
+    gap: 0.5rem;
+  }
+  .card {
+    filter: blur(0px) brightness(1);
+  }
+  .card:hover {
+    transform: translatez(150px);
+    filter: blur(0px) brightness(1);
+    animation: bg-move 20s linear forwards;
+  }
 }
