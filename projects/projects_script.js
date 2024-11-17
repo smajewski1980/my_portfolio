@@ -83,7 +83,7 @@ if (viewportWidth < 1200) {
     titleDiv.textContent = title;
     const descDiv = newDiv();
     descDiv.classList.add("sm-desc");
-    descDiv.textContent = desc;
+    descDiv.innerHTML = desc;
     infoDiv.appendChild(titleDiv);
     infoDiv.appendChild(descDiv);
     card.prepend(infoDiv);

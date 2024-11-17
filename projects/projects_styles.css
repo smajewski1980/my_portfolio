@@ -138,34 +138,11 @@
   background-size: 300px;
 }
 
-.card:hover {
-  transform: translatez(150px);
-  filter: blur(0px) brightness(1);
-  animation: bg-move 20s linear forwards;
-}
-
 @keyframes bg-move {
   to {
     /* background-position: -175px 0%; */
     background-position: 100% 0%;
   }
-}
-
-.card:hover + * {
-  transform: translatez(110px) rotatey(25deg);
-  filter: blur(3px) brightness(0.75);
-}
-.card:hover + * + * {
-  transform: translatez(37px) rotatey(5deg);
-  filter: blur(7px) brightness(0.75);
-}
-.card:has(+ *:hover) {
-  transform: translatez(110px) rotatey(calc(25deg * -1));
-  filter: blur(3px) brightness(0.75);
-}
-.card:has(+ * + *:hover) {
-  transform: translatez(37px) rotatey(-5deg);
-  filter: blur(7px) brightness(0.75);
 }
 
 .card:nth-child(1) {
@@ -207,6 +184,30 @@
   z-index: 99;
 }
 
+@media screen and (width >= 1200px) {
+  .card:hover {
+    transform: translatez(150px);
+    filter: blur(0px) brightness(1);
+    animation: bg-move 20s linear forwards;
+  }
+  .card:hover + * {
+    transform: translatez(110px) rotatey(25deg);
+    filter: blur(3px) brightness(0.75);
+  }
+  .card:hover + * + * {
+    transform: translatez(37px) rotatey(5deg);
+    filter: blur(7px) brightness(0.75);
+  }
+  .card:has(+ *:hover) {
+    transform: translatez(110px) rotatey(calc(25deg * -1));
+    filter: blur(3px) brightness(0.75);
+  }
+  .card:has(+ * + *:hover) {
+    transform: translatez(37px) rotatey(-5deg);
+    filter: blur(7px) brightness(0.75);
+  }
+}
+
 @media screen and (width < 1700px) {
   .info-wrapper {
     top: -1rem;
@@ -236,15 +237,12 @@
     width: 47ch;
   }
   .card-wrapper {
-    width: 75vw;
+    /* width: vw; */
     gap: 0.5rem;
+    flex-direction: column;
   }
   .card {
     filter: blur(0px) brightness(1);
-  }
-  .card:hover {
-    transform: translatez(150px);
-    filter: blur(0px) brightness(1);
-    animation: bg-move 20s linear forwards;
+    width: 100%;
   }
 }
