@@ -70,3 +70,22 @@ if (viewportWidth > 1200) {
     card.addEventListener("mouseout", hideDescription);
   });
 }
+
+if (viewportWidth < 1200) {
+  cards.forEach((card, index) => {
+    const title = descriptions[index].title;
+    const desc = descriptions[index].desc;
+    const newDiv = () => document.createElement("div");
+    const infoDiv = newDiv();
+    infoDiv.classList.add("sm-scr-card-info");
+    const titleDiv = newDiv();
+    titleDiv.classList.add("sm-title");
+    titleDiv.textContent = title;
+    const descDiv = newDiv();
+    descDiv.classList.add("sm-desc");
+    descDiv.textContent = desc;
+    infoDiv.appendChild(titleDiv);
+    infoDiv.appendChild(descDiv);
+    card.prepend(infoDiv);
+  });
+}
