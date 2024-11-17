@@ -64,7 +64,9 @@ function hideDescription() {
   }, 100);
 }
 
-cards.forEach((card) => {
-  card.addEventListener("mouseover", showDescription);
-  card.addEventListener("mouseout", hideDescription);
-});
+if (viewportWidth > 1200) {
+  cards.forEach((card) => {
+    card.addEventListener("mouseover", showDescription);
+    card.addEventListener("mouseout", hideDescription);
+  });
+}
