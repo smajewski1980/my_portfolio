@@ -27,6 +27,7 @@
   border-bottom: 3px solid rgb(244, 112, 227);
   position: absolute;
   transition: filter 0.3s ease;
+  z-index: -1;
 }
 
 /* END LIGHT STYLES */
@@ -37,7 +38,6 @@
   perspective-origin: bottom;
   transform-style: preserve-3d;
   position: absolute;
-  /* scale: 0.85; */
 }
 
 .graphic-design-wrapper img,
@@ -58,7 +58,6 @@
 .graphic-design-wrapper img:hover,
 .portrait-wrapper img:hover {
   filter: brightness(1) blur(0);
-  /* scale: 1; */
   transform: translate3d(10px, -5px, 100px);
 }
 
@@ -215,5 +214,21 @@
   }
   .spotlight {
     height: 600px;
+  }
+}
+
+@media screen and (width < 1200px) {
+  .graphic-design-wrapper img,
+  .portrait-wrapper img {
+    filter: brightness(1) blur(0);
+    z-index: 999;
+  }
+  .graphic-design-wrapper {
+    top: 35%;
+    left: 3%;
+  }
+  .portrait-wrapper {
+    top: 35%;
+    right: 4%;
   }
 }

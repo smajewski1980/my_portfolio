@@ -1,5 +1,4 @@
-// let width = window.innerWidth;
-// console.log(width);
+let viewportWidth = window.innerWidth;
 // setInterval(() => {
 //   newWidth = window.innerWidth;
 //   if (newWidth !== width) console.log(newWidth);
@@ -178,5 +177,7 @@ populateSlides(rtFlame4, 52, "flame4", "flames", true);
 populateSlides(ltFlame4Rear, 52, "flame4", "flames", true);
 populateSlides(rtFlame4Rear, 52, "flame4", "flames", true);
 
-startFl4sStaggered();
-setTimeout(fadeInFl4s, 500);
+if (viewportWidth > 1200) {
+  startFl4sStaggered();
+  setTimeout(fadeInFl4s, 500);
+}
