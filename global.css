@@ -209,9 +209,10 @@ a:visited {
   }
 
   .page-title-wrapper {
-    position: absolute;
+    /* position: absolute;
     top: 3rem;
-    right: 4rem;
+    right: 4rem; */
+    display: none;
   }
 }
 
