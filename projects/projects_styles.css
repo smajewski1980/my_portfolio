@@ -55,16 +55,6 @@
   right: 4%;
 }
 
-.graphic-design-wrapper img:hover,
-.portrait-wrapper img:hover {
-  filter: brightness(1) blur(0);
-  transform: translate3d(10px, -5px, 100px);
-}
-
-.portrait-wrapper img:hover {
-  transform: translate3d(-10px, -5px, 100px);
-}
-
 .info-wrapper {
   width: 54.6875rem;
   margin-inline: auto;
@@ -206,6 +196,15 @@
     transform: translatez(37px) rotatey(-5deg);
     filter: blur(7px) brightness(0.75);
   }
+  .graphic-design-wrapper img:hover,
+  .portrait-wrapper img:hover {
+    filter: brightness(1) blur(0);
+    transform: translate3d(10px, -5px, 100px);
+  }
+
+  .portrait-wrapper img:hover {
+    transform: translate3d(-10px, -5px, 100px);
+  }
 }
 
 @media screen and (width < 1700px) {
@@ -225,24 +224,74 @@
     z-index: 999;
   }
   .graphic-design-wrapper {
-    top: 35%;
-    left: 3%;
+    top: 25rem;
+    left: 5%;
   }
   .portrait-wrapper {
-    top: 35%;
-    right: 4%;
+    top: 15rem;
+    left: 5%;
   }
   .desc {
     text-wrap: wrap;
     width: 47ch;
   }
   .card-wrapper {
-    /* width: vw; */
-    gap: 0.5rem;
+    gap: 1rem;
     flex-direction: column;
+    margin-top: 5rem;
+    margin-inline: auto 5rem;
+    width: 65vw;
   }
   .card {
     filter: blur(0px) brightness(1);
     width: 100%;
+    height: 300px;
+    padding: 0 2rem 0.5rem;
+    background-position: 2rem 4rem;
+    position: relative;
+    background-size: 325px;
+  }
+  .card:nth-of-type(1) {
+    order: 6;
+  }
+  .card:nth-of-type(2) {
+    order: 5;
+  }
+  .card:nth-of-type(3) {
+    order: 4;
+  }
+  .card:nth-of-type(4) {
+    order: 1;
+  }
+  .card:nth-of-type(5) {
+    order: 2;
+  }
+  .card:nth-of-type(6) {
+    order: 3;
+  }
+  .card:nth-of-type(7) {
+    order: 7;
+  }
+  .sm-title {
+    text-wrap: nowrap;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+  }
+  .sm-desc {
+    line-height: 1.3;
+    /* width: 50ch; */
+  }
+  .card-icons-wrapper {
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    left: 75%;
+    transform: translateX(-50%);
+    top: 7.5rem;
+  }
+  .icon {
+    max-width: 100%;
   }
 }

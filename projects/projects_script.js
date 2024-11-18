@@ -28,7 +28,7 @@ const descriptions = [
     desc: "This was a fun music app I made for a few laughs in the office.</br>This one includes you gettin' down!",
   },
   {
-    title: "Empire State Aerosciences Museum Visit Page",
+    title: "Empire State Aerosciences Museum",
     desc: "I went there and thought this would be a fun page to build.</br>This one includes a few modals and an image gallery.</br>It also shows the live weather at the museum.",
   },
   {
