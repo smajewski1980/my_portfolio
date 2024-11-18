@@ -180,6 +180,7 @@ function runNavExplosion() {
 
 function finalSeq() {
   runNavExplosion();
+  document.body.style.minHeight = "unset";
   tempBg.classList.add("bg-fly-out");
   navListItems.forEach((item) => {
     item.style.display = "list-item";

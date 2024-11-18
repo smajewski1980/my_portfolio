@@ -20,14 +20,9 @@
 body {
   font-family: "RocherColorGX", system-ui, "Segoe UI", "Open Sans",
     "Helvetica Neue", sans-serif;
-  /* min-height: 100vh; */
-  /* overflow: hidden; */
   color: var(--font-fallback);
   font-weight: bold;
-}
-
-.body-bg {
-  background: url(./assets/bgs/numsBackgroundImage.png);
+  background-image: url(./assets/bgs/numsBackgroundImage.png);
 }
 
 img {
@@ -53,8 +48,6 @@ a:visited {
   transition: font-variation-settings 0.5s ease;
   z-index: 99;
 }
-
-/* still need to make heading ?"floating letters"? animation */
 
 .heading-word {
   display: flex;
@@ -99,11 +92,9 @@ a:visited {
 }
 
 .heading-wrapper:hover .heading-word:first-child > *:nth-child(even) {
-  /* transform: translateY(1px); */
   rotate: 20deg;
 }
 .heading-wrapper:hover .heading-word:last-child > *:nth-child(odd) {
-  /* transform: translateY(-1px); */
   rotate: 10deg;
 }
 
