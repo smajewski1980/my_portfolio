@@ -174,7 +174,7 @@ populateSlides(rtFlame4, 52, "flame4", "flames", true);
 populateSlides(ltFlame4Rear, 52, "flame4", "flames", true);
 populateSlides(rtFlame4Rear, 52, "flame4", "flames", true);
 
-if (viewportWidth > 1200) {
+if (getInnerWidth() > 1200) {
   startFl4sStaggered();
   setTimeout(fadeInFl4s, 500);
 }

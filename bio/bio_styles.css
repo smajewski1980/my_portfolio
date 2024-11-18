@@ -49,6 +49,8 @@ main {
 @media screen and (width < 1200px) {
   main {
     margin-top: 0;
+    width: 100%;
+    padding-inline: 4rem;
   }
   .bio-image-wrapper {
     position: absolute;
@@ -60,5 +62,46 @@ main {
   }
   .bio-text {
     gap: 0.25rem;
+  }
+}
+
+@media screen and (width < 1000px) {
+  main {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .bio-image-wrapper {
+    width: 80vw;
+    position: relative;
+    left: 0;
+    top: 5rem;
+  }
+  .bio-image-wrapper img {
+    width: 100%;
+  }
+  .bio-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.8) 40%,
+      rgba(0, 0, 0, 0.5) 50%,
+      transparent 100%
+    );
+  }
+  .bio-text {
+    margin-top: -175px;
+  }
+}
+
+@media screen and (width < 650px) {
+  main {
+    padding-inline: 1rem;
+  }
+  .bio-image-wrapper {
+    top: 2rem;
+    margin: 0;
   }
 }

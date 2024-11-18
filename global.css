@@ -183,7 +183,7 @@ a:visited {
 
 @media screen and (width < 1000px) {
   .heading-wrapper {
-    top: 10%;
+    top: 2rem;
     left: 50%;
     rotate: 0deg;
     display: grid;
@@ -206,5 +206,17 @@ a:visited {
 
   .heading-word > * {
     rotate: 0deg;
+  }
+
+  .page-title-wrapper {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+  }
+}
+
+@media screen and (width < 650px) {
+  .page-title-wrapper {
+    right: 1.5rem;
   }
 }
