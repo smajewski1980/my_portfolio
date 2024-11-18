@@ -939,7 +939,6 @@ li:nth-of-type(3):focus-visible {
     display: list-item;
   }
   .heading-wrapper {
-    pointer-events: none;
     top: 10%;
     left: 50%;
     rotate: 0deg;
@@ -947,8 +946,6 @@ li:nth-of-type(3):focus-visible {
     transition: none;
     transform: scale(1) translateX(-50%);
     opacity: 1;
-    position: absolute;
-    font-variation-settings: "SHDW" 35, "BVEL" 85;
   }
   .heading-word {
     display: flex;
