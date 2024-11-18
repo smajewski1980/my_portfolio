@@ -2,7 +2,7 @@ const footerText = document.querySelector("footer p");
 const mgrInnerWrapper = document.querySelector(".merry-go-round-inner-wrapper");
 const portraitWrapper = document.querySelector(".gd-portrait-wrapper");
 
-if (viewportWidth < 1200) {
+if (getInnerWidth() < 1200) {
   footerText.textContent = "push here to pause merry-go-round";
 }
 

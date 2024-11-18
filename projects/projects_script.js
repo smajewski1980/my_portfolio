@@ -64,14 +64,14 @@ function hideDescription() {
   }, 100);
 }
 
-if (viewportWidth > 1200) {
+if (getInnerWidth() > 1200) {
   cards.forEach((card) => {
     card.addEventListener("mouseover", showDescription);
     card.addEventListener("mouseout", hideDescription);
   });
 }
 
-if (viewportWidth < 1200) {
+if (getInnerWidth() < 1200) {
   cards.forEach((card, index) => {
     const title = descriptions[index].title;
     const desc = descriptions[index].desc;

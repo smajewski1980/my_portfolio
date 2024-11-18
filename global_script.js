@@ -1,10 +1,3 @@
-let viewportWidth = window.innerWidth;
-// setInterval(() => {
-//   newWidth = window.innerWidth;
-//   if (newWidth !== width) console.log(newWidth);
-// }, 100);
-
-// main animation
 const fireLoop1 = new Audio("/assets/sounds/fire_loop_1.mp3");
 fireLoop1.loop = true;
 fireLoop1.volume = 0.5;
@@ -119,6 +112,10 @@ const ltFl4WrapperRear = document.querySelector(".fl4-w-2 .lt-fl4-wr");
 const ltFlame4Rear = document.querySelector(".fl4-w-2 .lt-fl4-wr .flame4");
 const rtFl4WrapperRear = document.querySelector(".fl4-w-2 .rt-fl4-wr");
 const rtFlame4Rear = document.querySelector(".fl4-w-2 .rt-fl4-wr .flame4");
+
+function getInnerWidth() {
+  return window.innerWidth;
+}
 
 function populateSlides(divElem, slideQty, nameStr, folder) {
   let innerMarkup = `<div class="${nameStr}-spacer"></div>`;

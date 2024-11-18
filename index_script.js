@@ -180,7 +180,6 @@ function runNavExplosion() {
 
 function finalSeq() {
   runNavExplosion();
-  document.body.style.minHeight = "unset";
   tempBg.classList.add("bg-fly-out");
   navListItems.forEach((item) => {
     item.style.display = "list-item";
@@ -340,10 +339,14 @@ function MasterSeq() {
   }, 9000);
 }
 
-function abortAnimation() {
+function removeIntroElements() {
   animWrapper.remove();
   btnSkipAnim.remove();
   btnEnter.remove();
+}
+
+function abortAnimation() {
+  removeIntroElements();
   setBodyBg();
   finalSeq();
 }
@@ -357,3 +360,8 @@ populateSlides(smokePuff2, 10, "puff2", "smoke");
 
 btnEnter.addEventListener("click", MasterSeq);
 btnSkipAnim.addEventListener("click", abortAnimation);
+
+if (getInnerWidth() < 1200) {
+  removeIntroElements();
+  navExplosion.parentElement.remove();
+}
