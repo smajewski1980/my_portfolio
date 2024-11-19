@@ -2,6 +2,10 @@
   margin-left: 2rem;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .merry-go-round-wrapper {
   --spin-anim-tim: 120s;
   width: 100%;
