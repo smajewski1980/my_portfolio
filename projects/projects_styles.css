@@ -295,3 +295,31 @@
     max-width: 100%;
   }
 }
+
+@media screen and (width < 1000px) {
+  .light-img-wrapper,
+  .spotlight,
+  .info-wrapper {
+    display: none;
+  }
+  .sm-title {
+    text-wrap: wrap;
+  }
+
+  .card-wrapper {
+    margin-inline: auto;
+    margin-top: 12rem;
+    width: 85vw;
+  }
+  .graphic-design-wrapper {
+    top: 2.5rem;
+    left: 2rem;
+    width: 15%;
+  }
+  .portrait-wrapper {
+    top: 2.5rem;
+    left: unset;
+    right: 2rem;
+    width: 15%;
+  }
+}
