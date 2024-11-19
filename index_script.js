@@ -361,7 +361,7 @@ populateSlides(smokePuff2, 10, "puff2", "smoke");
 btnEnter.addEventListener("click", MasterSeq);
 btnSkipAnim.addEventListener("click", abortAnimation);
 
-if (getInnerWidth() < 1200) {
+if (getInnerWidth() < 1000) {
   removeIntroElements();
   navExplosion.parentElement.remove();
 }
