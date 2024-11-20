@@ -165,8 +165,6 @@ a:visited {
     top: 2rem;
     transform: scale(1) translateX(-50%);
     transition: none;
-
-    /* font-variation-settings: "SHDW" 35, "BVEL" 85; */
   }
   .heading-word {
     display: flex;
@@ -182,10 +180,6 @@ a:visited {
   }
   .page-title-wrapper {
     display: none;
-
-    /* position: absolute;
-    top: 3rem;
-    right: 4rem; */
   }
 }
 @media screen and (width < 650px) {
