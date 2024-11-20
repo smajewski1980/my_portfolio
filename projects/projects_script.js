@@ -64,7 +64,7 @@ function hideDescription() {
   }, 100);
 }
 
-if (getInnerWidth() > 1200) {
+if (getInnerWidth() >= 1200) {
   cards.forEach((card) => {
     card.addEventListener("mouseover", showDescription);
     card.addEventListener("mouseout", hideDescription);
