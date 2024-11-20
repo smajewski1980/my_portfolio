@@ -33,19 +33,6 @@ const churchBell2 = new Audio("./assets/sounds/church_bell_2.mp3");
 churchBell2.volume = 0.3;
 const bell3 = new Audio("./assets/sounds/bell_can_i_help_you.mp3");
 bell3.volume = 0.3;
-
-const audioArray = [
-  fireLoop1,
-  fireLoop2,
-  fireLoop3,
-  sparkFar,
-  sparkClose,
-  sparkCloser,
-  fireWhoosh,
-  floorSpark,
-  floorFlame,
-];
-
 const btnEnter = document.querySelector(".btn-enter");
 const btnSkipAnim = document.querySelector(".btn-skip-anim");
 const animWrapper = document.querySelector(".animation-wrapper");
@@ -100,9 +87,6 @@ const flame8_3 = document.querySelector(".fl-8-3 .flame8");
 const smokePuffWrapper = document.querySelector(".smoke-puff-wrapper");
 const smokePuff = document.querySelector(".smoke-puff");
 const smokePuff2 = document.querySelector(".smoke-puff-2");
-// end main animation
-
-// pages footer flames
 
 const ltFl4Wrapper = document.querySelector(".fl4-w-1 .lt-fl4-wr");
 const ltFlame4 = document.querySelector(".fl4-w-1 .lt-fl4-wr .flame4");
@@ -169,12 +153,11 @@ function fadeInFl4s() {
   rtFl4WrapperRear.classList.add("rear-fade-in");
 }
 
-populateSlides(ltFlame4, 52, "flame4", "flames", true);
-populateSlides(rtFlame4, 52, "flame4", "flames", true);
-populateSlides(ltFlame4Rear, 52, "flame4", "flames", true);
-populateSlides(rtFlame4Rear, 52, "flame4", "flames", true);
-
 if (getInnerWidth() > 1200) {
+  populateSlides(ltFlame4, 52, "flame4", "flames", true);
+  populateSlides(rtFlame4, 52, "flame4", "flames", true);
+  populateSlides(ltFlame4Rear, 52, "flame4", "flames", true);
+  populateSlides(rtFlame4Rear, 52, "flame4", "flames", true);
   startFl4sStaggered();
   setTimeout(fadeInFl4s, 500);
 }
