@@ -1,39 +1,33 @@
 main {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 50vw;
-  min-height: 100vh;
-  margin-inline: auto;
-  padding-top: 5rem;
-  /* outline: 2px solid lime; */
+  display: flex;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
+  justify-content: space-between;
+  margin-inline: auto;
+  min-height: 100vh;
+  padding-top: 5rem;
+  width: 50vw;
 }
-
 .bio-image-wrapper {
   width: 20vw;
 }
-
 .bio-text {
   display: grid;
   gap: 0.75rem;
 }
-
 .bio-text p {
-  max-width: 47ch;
-  font-variation-settings: SHDW 0, BEVL 0;
   filter: brightness(0.85);
-  text-align: center;
-  line-height: 1.5;
+  font-variation-settings: SHDW 0, BEVL 0;
   letter-spacing: 1px;
+  line-height: 1.5;
+  max-width: 47ch;
+  text-align: center;
 }
-
 @media screen and (width < 1700px) {
   main {
-    width: 60vw;
-    justify-content: center;
     gap: 2rem;
-    /* margin-top: 3rem; */
+    justify-content: center;
+    width: 60vw;
   }
   .bio-text {
     gap: 0.5rem;
@@ -45,16 +39,15 @@ main {
     width: 15vw;
   }
 }
-
 @media screen and (width < 1200px) {
   main {
     margin-top: 0;
-    width: 100%;
     padding-inline: 4rem;
+    width: 100%;
   }
   .bio-image-wrapper {
-    position: absolute;
     left: 5%;
+    position: absolute;
     top: 35%;
   }
   .bio-text p {
@@ -64,25 +57,24 @@ main {
     gap: 0.25rem;
   }
 }
-
 @media screen and (width < 1000px) {
   main {
     flex-direction: column;
     margin-bottom: 2rem;
   }
   .bio-image-wrapper {
-    width: 80vw;
-    position: relative;
     left: 0;
+    position: relative;
     top: 5rem;
+    width: 80vw;
   }
   .bio-image-wrapper img {
     width: 100%;
   }
   .bio-image-wrapper::after {
     content: "";
-    position: absolute;
     inset: 0;
+    position: absolute;
     background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 1),
@@ -95,13 +87,12 @@ main {
     margin-top: -175px;
   }
 }
-
 @media screen and (width < 650px) {
   main {
     padding-inline: 1rem;
   }
   .bio-image-wrapper {
-    top: 2rem;
     margin: 0;
+    top: 2rem;
   }
 }
