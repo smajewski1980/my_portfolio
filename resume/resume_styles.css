@@ -18,6 +18,13 @@
   text-align: center;
   width: 25rem;
 }
+
+@media screen and (width > 2200px) {
+  .resume-img-wrapper {
+    margin: 5vw auto 0;
+  }
+}
+
 @media screen and (width < 1700px) {
   .icons-wrapper {
     bottom: 5%;

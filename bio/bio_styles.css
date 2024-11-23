@@ -23,6 +23,11 @@ main {
   max-width: 47ch;
   text-align: center;
 }
+@media screen and (width > 2200px) {
+  main {
+    justify-content: center;
+  }
+}
 @media screen and (width < 1700px) {
   main {
     gap: 2rem;

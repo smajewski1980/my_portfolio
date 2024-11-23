@@ -86,7 +86,7 @@ nav {
 }
 .nav-move-in {
   animation: nav-motion-blur 0.5s ease;
-  bottom: 12.5%;
+  bottom: 10%;
   left: 17%;
   opacity: 1;
 }
@@ -104,7 +104,7 @@ nav {
 li {
   cursor: pointer;
   display: none;
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-variation-settings: "SHDW" 75, "BVEL" 75;
   letter-spacing: 5px;
   line-height: 1;
@@ -130,14 +130,14 @@ li:nth-of-type(3):focus-visible {
 }
 .heading-wrapper {
   display: none;
-  font-size: 6vw;
+  font-size: 5vw;
   font-variation-settings: "SHDW" 35, "BVEL" 85;
   left: 7%;
   opacity: 0;
   pointer-events: none;
   position: absolute;
   rotate: -15deg;
-  top: 10%;
+  top: 8%;
   transform: scale(0);
   transition: opacity 0.55s ease, transform 0.55s ease-out;
 }
@@ -793,7 +793,7 @@ li:nth-of-type(3):focus-visible {
 .nav-explosion-wrapper {
   height: 250px;
   overflow: hidden;
-  transform: translate(-50px, -400px);
+  transform: translate(-50px, -350px);
   width: 250px;
   z-index: 999;
 }
@@ -820,6 +820,12 @@ li:nth-of-type(3):focus-visible {
   transform: translate(-50%, -50%);
   width: 750px;
   z-index: 10;
+}
+
+@media screen and (width > 2200px) {
+  body {
+    background-position: 0 -200px;
+  }
 }
 @media screen and (width < 1200px) {
   .animation-wrapper {
