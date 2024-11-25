@@ -2,7 +2,8 @@ main {
   align-items: center;
   display: flex;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
-  justify-content: space-between;
+  gap: 1rem;
+  justify-content: center;
   margin-inline: auto;
   min-height: 100vh;
   padding-top: 5rem;
@@ -21,11 +22,13 @@ main {
   letter-spacing: 1px;
   line-height: 1.5;
   max-width: 47ch;
-  /* text-align: center; */
 }
 @media screen and (width > 2200px) {
   main {
-    justify-content: center;
+    padding-inline: 10rem;
+  }
+  .bio-text p {
+    max-width: 60ch;
   }
 }
 @media screen and (width < 1700px) {
@@ -80,6 +83,7 @@ main {
     content: "";
     inset: 0;
     position: absolute;
+
     background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 1),

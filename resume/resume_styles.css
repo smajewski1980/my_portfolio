@@ -13,36 +13,24 @@
   max-width: 30px;
 }
 .resume-img-wrapper {
-  font-variation-settings: "SHDW" 0, "BVEL" 0;
-  /* margin: 20vh auto 0; */
-  position: absolute;
-  inset: 0;
-  margin: auto;
   display: flex;
-  width: 47rem;
   flex-wrap: wrap;
-  justify-content: center;
-  /* outline: 2px solid lime; */
-  max-height: 50vh;
+  font-variation-settings: "SHDW" 0, "BVEL" 0;
   gap: 1rem;
+  inset: 0;
+  justify-content: center;
+  margin: auto;
+  max-height: 50vh;
+  position: absolute;
+  width: 47rem;
 }
-
 .resume-img-wrapper img {
   width: 23rem;
-  /* outline: 2px solid lime; */
 }
-
 .resume-caption {
   text-align: center;
   width: 100%;
 }
-
-/* @media screen and (width > 2200px) {
-  .resume-img-wrapper {
-    margin: 5vw auto 0;
-  }
-} */
-
 @media screen and (width < 1700px) {
   .icons-wrapper {
     bottom: 5%;
