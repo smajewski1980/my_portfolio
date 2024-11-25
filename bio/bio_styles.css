@@ -21,7 +21,7 @@ main {
   letter-spacing: 1px;
   line-height: 1.5;
   max-width: 47ch;
-  text-align: center;
+  /* text-align: center; */
 }
 @media screen and (width > 2200px) {
   main {
