@@ -29,6 +29,7 @@
 }
 .resume-caption {
   text-align: center;
+  text-wrap: nowrap;
   width: 100%;
 }
 @media screen and (width < 1700px) {
@@ -40,8 +41,8 @@
   }
 }
 @media screen and (width < 1200px) {
-  .resume-img-wrapper {
-    width: 25vw;
+  .resume-img-wrapper img {
+    width: 13rem;
   }
 }
 @media screen and (width < 1000px) {

@@ -104,4 +104,7 @@ main {
     margin: 0;
     top: 2rem;
   }
+  .bio-text p {
+    text-align: center;
+  }
 }
