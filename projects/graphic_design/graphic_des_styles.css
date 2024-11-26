@@ -83,10 +83,10 @@ body {
 }
 @keyframes spin-to-stay {
   from {
-    transform: rotateY(0deg) translateY(-50px);
+    transform: rotateY(0deg) translate3d(0, 0, 275px);
   }
   to {
-    transform: rotateY(360deg) translateY(-50px);
+    transform: rotateY(360deg) translate3d(0, 0, 275px);
   }
 }
 footer {
