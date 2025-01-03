@@ -12,8 +12,8 @@ const descriptions = [
     desc: "A Codecademy project that will remain online as a collector's resource.",
   },
   {
-    title: "My Music Catalog v1",
-    desc: "Version one was made before I knew any Javascript.</br>I exported PDFs from my database and embedded them in iframes.",
+    title: "Product List With Cart",
+    desc: "A Frontend Mentor project of an interactive product shopping cart,</br>which has a responsive layout and an order confirmation modal.",
   },
   {
     title: "My Music Catalog v2",
